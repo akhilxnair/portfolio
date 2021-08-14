@@ -20,6 +20,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'import/no-unresolved': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
