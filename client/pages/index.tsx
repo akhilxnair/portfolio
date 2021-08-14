@@ -1,6 +1,6 @@
 // Import Modules
 import Head from 'next/head';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 
 // Important Components
 import IntroText from '@components/IntroText/IntroText';

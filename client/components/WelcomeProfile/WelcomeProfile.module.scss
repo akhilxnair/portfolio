@@ -4,6 +4,7 @@
     border-radius: 50%;
     height: 120px;
     width: 120px;
+    object-fit: cover;
     box-shadow: 0 0 0 5px #f66;
     animation: bounceOut infinite 1s linear;
     &:hover {

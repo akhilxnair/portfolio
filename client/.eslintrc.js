@@ -5,12 +5,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: [
-    'airbnb',
-    'next/core-web-vitals',
-    'plugin:react/recommended',
-    'prettier',
-  ],
+  extends: ['airbnb', 'plugin:react/recommended', 'prettier'],
   parser: '@typescript-eslint/parser',
   ignorePatterns: ['node_modules/*'],
   parserOptions: {
@@ -20,10 +15,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': 'off',
