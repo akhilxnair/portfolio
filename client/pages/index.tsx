@@ -5,7 +5,6 @@ import Particles from 'react-tsparticles';
 // Important Components
 import WelcomeText from '@components/WelcomeText/WelcomeText';
 import WelcomeProfile from '@components/WelcomeProfile/WelcomeProfile';
-import Experience from '@components/Experience/Experience';
 
 // Import Styles
 import style from '../styles/index.module.scss';
@@ -39,7 +38,6 @@ const Homepage = () => (
         retina_detect: true,
       }}
     />
-    <Experience />
   </div>
 );
 
