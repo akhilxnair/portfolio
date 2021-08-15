@@ -3,9 +3,9 @@ import Head from 'next/head';
 import Particles from 'react-tsparticles';
 
 // Important Components
-import IntroText from '@components/IntroText/IntroText';
 import WelcomeText from '@components/WelcomeText/WelcomeText';
 import WelcomeProfile from '@components/WelcomeProfile/WelcomeProfile';
+import Experience from '@components/Experience/Experience';
 
 // Import Styles
 import style from '../styles/index.module.scss';
@@ -21,9 +21,6 @@ const Homepage = () => (
     </div>
     <div className={style.welcomeProfile}>
       <WelcomeProfile />
-    </div>
-    <div className={style.introWrapper}>
-      <IntroText />
     </div>
     <Particles
       style={{ minHeight: '100vh' }}
@@ -42,6 +39,7 @@ const Homepage = () => (
         retina_detect: true,
       }}
     />
+    <Experience />
   </div>
 );
 
