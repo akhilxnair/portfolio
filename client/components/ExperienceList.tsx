@@ -1,20 +1,10 @@
 // Import Modules
 import { Link } from '@chakra-ui/react'
 
-export type Company = 'SCG' | 'Blotocol'
+// Import Interfaces
+import { IExperience, ICompany } from 'types/Interfaces'
 
-export type CompanyDetail = {
-  name: string
-  longName: string
-  subDetail?: string
-  url: string
-  position: string
-  duration: string
-  logo: { light: string, dark?: string }
-  roles?: JSX.Element[]
-}
-
-export const Experiences: { [key in Company]: CompanyDetail } = {
+export const Experiences: { [key in ICompany]: IExperience } = {
   SCG: {
     name: 'Scentregroup',
     longName: 'Scentregroup Limited AU',
@@ -22,19 +12,11 @@ export const Experiences: { [key in Company]: CompanyDetail } = {
     url: 'https://www.scentregroup.com/',
     position: 'Software Engineer',
     duration: 'Feb 2020 - Present',
-    logo: {
-      light: '/worked_at_logos/scg/SCG_400x400.jpg',
-      dark: '/worked_at_logos/scg/SCG.png',
-    },
+    logo: { light: '/worked_at_logos/scg/SCG_400x400.jpg', dark: '/worked_at_logos/scg/SCG.png', },
     roles: [
       <>
         Revamping the legacy Partner Portal into a new{' '}
-        <Link
-          aria-label="Westfield Marketing Hub"
-          href="https://partner.scentregroup.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link aria-label="Westfield Marketing Hub" href="https://partner.scentregroup.com/" target="_blank" rel="noreferrer">
           Westfield Marketing Hub
         </Link>{' '}
         using NextJS and Typescript. Restructuring the old express backend app
@@ -46,15 +28,10 @@ export const Experiences: { [key in Company]: CompanyDetail } = {
       </>,
       <>
         Worked on maintaining{' '}
-        <Link
-          variant="primaryLink"
-          href="https://www.westfield.com.au/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link variant="primaryLink" href="https://www.westfield.com.au/" target="_blank" rel="noreferrer"        >
           Westfield
-        </Link>{' '}
-        main site and Graphql apis written in NodeJS.
+        </Link>
+        {' '}main site and Graphql apis written in NodeJS.
       </>,
       <>
         Migrating of existing marketing emails related tools and batches from
@@ -64,12 +41,7 @@ export const Experiences: { [key in Company]: CompanyDetail } = {
         Hired at early 2020, first big task was helping with selection a new
         marketing vendor that can scale as well as enable us to have
         personalisation, selecting{' '}
-        <Link
-          aria-label="Braze"
-          href="https://www.braze.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link aria-label="Braze" href="https://www.braze.com/" target="_blank" rel="noreferrer"        >
           Braze
         </Link>{' '}
         as a result.

@@ -5,14 +5,20 @@ import {
 } from '@chakra-ui/react'
 
 // Import Config
-import { Skill, Skills, splitSkills } from 'config/skills'
+import { Skills } from 'config/StaticData'
+
+//  Import  Utils
+import { splitSkills } from 'utils/HelperFunction'
+
+// Import Interfaces
+import { ISkill } from 'types/Interfaces'
 
 // Import Styles
 import styles from 'styles/SkillSetModal.module.css'
 
 type ISkillSetModal = { isOpen: boolean, onClose(): void }
 
-const SkillList = ({ title, columns, }: { title: string, columns: Skill[][] }) => {
+const SkillList = ({ title, columns, }: { title: string, columns: ISkill[][] }) => {
   const emphasis = useColorModeValue('teal.500', 'cyan.200')
   const [colOne, colTwo = []] = columns
   return (

@@ -4,7 +4,7 @@ import { motion, Variants, useAnimation } from 'framer-motion'
 import { Container, useColorModeValue, useBreakpointValue } from '@chakra-ui/react'
 
 // Import Config
-import { mobileBreakpointsMap } from 'config/theme'
+import { mobileBreakpointsMap } from 'config/ThemeConfig'
 import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
 
 // Import Components

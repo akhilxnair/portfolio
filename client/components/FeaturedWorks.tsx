@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import { Heading, Text, Stack, Grid, GridItem, useBreakpointValue, } from '@chakra-ui/react'
 
 // Import Config
-import { fadeInUpSlower, galleryStagger } from 'config/animations'
-import { mobileBreakpointsMap } from 'config/theme'
+import { fadeInUpSlower, galleryStagger } from 'config/Animation'
+import { mobileBreakpointsMap } from 'config/ThemeConfig'
 
 // Import Components
 import FeaturedCard from 'components/FeaturedCard'

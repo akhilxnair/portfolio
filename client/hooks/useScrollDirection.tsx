@@ -1,14 +1,11 @@
+// Import Modules
 import { useEffect, useState } from 'react'
 
 export enum ScrollDirection { Initial, Down, Up, }
 
 const AVATAR_PADD_OFFSET = 100
 
-const useScrollDirection = (
-  isMobileOnly = false,
-  isMobile = false,
-  belowAvatar = true
-) => {
+const useScrollDirection = (isMobileOnly = false, isMobile = false, belowAvatar = true) => {
   const [scrollDir, setScrollDir] = useState(ScrollDirection.Initial)
   const [isInitialized, setIsInitialized] = useState(false)
 
@@ -34,18 +31,12 @@ const useScrollDirection = (
       let currentScrollDirection = ScrollDirection.Initial
 
       // Used to tell if menu will show or not
-      if (scrollY > lastScrollY && isBelowAvatar) {
-        currentScrollDirection = ScrollDirection.Down
-      } else if (isBelowAvatar && !isMobile) {
-        currentScrollDirection = ScrollDirection.Down
-      } else {
-        currentScrollDirection = ScrollDirection.Up
-      }
+      if (scrollY > lastScrollY && isBelowAvatar) currentScrollDirection = ScrollDirection.Down
+      else if (isBelowAvatar && !isMobile) currentScrollDirection = ScrollDirection.Down
+      else currentScrollDirection = ScrollDirection.Up
 
       if (currentScrollDirection !== scrollDir) {
-        setScrollDir(
-          scrollY > lastScrollY ? ScrollDirection.Down : ScrollDirection.Up
-        )
+        setScrollDir(scrollY > lastScrollY ? ScrollDirection.Down : ScrollDirection.Up)
       }
       lastScrollY = scrollY > 0 ? scrollY : 0
       ticking = false

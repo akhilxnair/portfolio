@@ -1,10 +1,10 @@
 // Import Modules
 import { motion } from 'framer-motion'
-import { SocialMedias } from 'config/sidebar'
+import { SocialMedias } from 'config/StaticData'
 import { Stack, Heading, Text, Button, useColorMode, Container, Link, Box, Icon, useBreakpointValue } from '@chakra-ui/react'
 
 // Import Config
-import { fadeInUp, letterSpace, simpleOpacity, stagger, scaleUp } from 'config/animations'
+import { fadeInUp, letterSpace, simpleOpacity, stagger, scaleUp } from 'config/Animation'
 
 // Import Styles
 import styles from 'styles/Sidebar.module.css'
@@ -31,10 +31,10 @@ const Sidebar = () => {
       <Container padding={0} margin={0} height={{ xl: '100vh' }} display={{ xl: 'flex' }} alignItems={{ xl: 'center' }}      >
         <MotionStack variants={stagger} spacing={6} w="100">
           <MotionText variants={fadeInUp} delay={1} variant="accent" fontWeight="light"          >
-            Ohh you found me?. Howdy! I am
+            Here&apos;s an Interesting Portfolio
           </MotionText>
           <MotionHeading as="h1" size="2xl" paddingRight={{ lg: '20' }} textTransform="uppercase" variants={fadeInUp}          >
-            Marc Jhon
+            Developer
           </MotionHeading>
           <MotionHeading
             as="h2"
@@ -46,14 +46,14 @@ const Sidebar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Lawingco.
+            Akhil Nair
           </MotionHeading>
           <MotionText colorScheme="gray" fontSize="smaller" className={styles.marginTopForce} variants={fadeInUp}>
-            Or you could call me KL. That works too . . .
+            Or you could call me AxN. That works too . . .
           </MotionText>
 
           <MotionHeading as="h3" size="md" variant="emphasis" className={styles.marginTopSmall} variants={fadeInUp}          >
-            Software Engineer
+            Frontend Software Engineer
           </MotionHeading>
 
           <MotionText
@@ -68,8 +68,8 @@ const Sidebar = () => {
               {' '}
               Thank you!
             </Text>
-            <br />I am software engineer that specializes at backend apis, front
-            end integration, recently found myself dabbing and studying UX too.
+            <br />I am software engineer that specializes at front
+            end integration, a bit of backend and recently found myself dabbing and studying UX too.
           </MotionText>
           <MotionButton
             size="lg"
@@ -81,7 +81,7 @@ const Sidebar = () => {
             width="120px"
             variants={simpleOpacity}
             as="a"
-            href="mailto:marcjhon18@gmail.com"
+            href="mailto:4khiln4ir@gmail.com"
             target="_blank"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

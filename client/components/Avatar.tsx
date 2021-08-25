@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Box, Image as ChkImage, Text, Link, SkeletonCircle, useColorModeValue } from '@chakra-ui/react'
 
 // Import Config
-import { avatarAnimation } from 'config/animations'
+import { avatarAnimation } from 'config/Animation'
 
 const AvatarImages = { DarkMode: '/KL_avatar.png', LightMode: './KL_avatar_light.png', }
 

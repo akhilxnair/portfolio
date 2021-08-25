@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Box, Image, ResponsiveValue, Divider, Skeleton, Text, SimpleGrid, Button, Container, Stack, useColorModeValue } from '@chakra-ui/react'
 
 // Import Config
-import { easing, DURATIONS } from 'config/animations'
+import { easing, DURATIONS } from 'config/Animation'
 
 // Import Styles
 import styles from 'styles/FeaturedCard.module.css'

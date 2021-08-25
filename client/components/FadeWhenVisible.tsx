@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 // Import Config
-import { fadeInUpSlower } from 'config/animations'
+import { fadeInUpSlower } from 'config/Animation'
 
 const FadeInWhenVisible = ({ children }) => {
   const controls = useAnimation()

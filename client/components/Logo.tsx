@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useColorMode, Image, useBreakpointValue } from '@chakra-ui/react'
 
 // Import Config
-import { ThemeMode, mobileBreakpointsMap } from 'config/theme'
-import { simpleOpacity } from 'config/animations'
+import { ThemeMode, mobileBreakpointsMap } from 'config/ThemeConfig'
+import { simpleOpacity } from 'config/Animation'
 
 // Import Styles
 import styles from 'styles/Logo.module.css'

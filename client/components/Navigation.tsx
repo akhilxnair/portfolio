@@ -5,8 +5,8 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { Container, Button, Flex, Box, IconButton, useColorMode, useColorModeValue, useBreakpointValue } from '@chakra-ui/react'
 
 // Import Config
-import { easing, menuAnim } from 'config/animations'
-import { ThemeMode, mobileBreakpointsMap } from 'config/theme'
+import { easing, menuAnim } from 'config/Animation'
+import { ThemeMode, mobileBreakpointsMap } from 'config/ThemeConfig'
 import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
 
 // Import Components

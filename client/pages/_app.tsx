@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import { ChakraProvider } from '@chakra-ui/react'
 
 // Import Config
-import theme from 'config/theme'
+import theme from 'config/ThemeConfig'
 
 // Import Styles
 import 'styles/Global.css'

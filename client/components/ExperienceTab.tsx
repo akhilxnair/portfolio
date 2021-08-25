@@ -3,7 +3,7 @@ import { BiRightArrow } from 'react-icons/bi'
 import { Text, Link, Stack, Tabs, TabList, Tab, TabPanels, TabPanel, Image, List, ListIcon, ListItem, SlideFade, Skeleton, useColorModeValue, useBreakpointValue, useColorMode } from '@chakra-ui/react'
 
 // Import Congif
-import { ExperiencesList } from 'config/experience';
+import { ExperiencesList } from 'components/ExperienceList';
 
 const ExperienceTab = () => {
   const { colorMode } = useColorMode()

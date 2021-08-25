@@ -4,7 +4,7 @@ import { motion, Variants, AnimatePresence } from 'framer-motion'
 import { Box, Icon, Text, useBreakpointValue, useColorModeValue, } from '@chakra-ui/react'
 
 // Import Config
-import { mobileBreakpointsMap } from 'config/theme'
+import { mobileBreakpointsMap } from 'config/ThemeConfig'
 import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
 
 const scrollMoreVariants: Variants = {
