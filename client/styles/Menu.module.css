@@ -1,0 +1,9 @@
+.mobileMenuContainer{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  justify-items: flex-end;
+}
