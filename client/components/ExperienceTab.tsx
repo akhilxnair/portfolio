@@ -18,7 +18,7 @@ const ExperienceTab = () => {
       url: 'https://fampay.in/',
       position: 'Frontend Engineer',
       duration: 'Oct 2020 - Present',
-      logo: { light: '/FamPayLogo.svg', dark: '/FamPayLogo.svg', },
+      logo: { light: '/FamPayLogoDark.svg', dark: '/FamPayLogoLight.svg', },
       roles: [
         <>
           Revamping the legacy Partner Portal into a new{' '}
@@ -60,7 +60,7 @@ const ExperienceTab = () => {
       url: 'https://zuru.tech/',
       position: 'Frontend Engineer',
       duration: 'Oct 2018 - Oct 2020',
-      logo: { light: '/ZuruLogo.png', dark: '/ZuruLogo.png', },
+      logo: { light: '/ZuruLogoDark.png', dark: '/ZuruLogoLight.png', },
       roles: [
         <>
           Developed a Twitter Raffle Campaign / Contest Bot called Camps with
