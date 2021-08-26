@@ -75,7 +75,7 @@ const GetInTouch = () => {
           <Text as="span">
             <Icon as={RiGithubFill} h={6} w={6} /> <br />
             Designed and Made with <Icon as={RiHeartPulseFill} /> <br />
-            KL Lawingco <Icon as={RiCopyleftLine} /> 2021
+            Akhil Nair <Icon as={RiCopyleftLine} /> 2021
           </Text>
         </Link>
       </Box>

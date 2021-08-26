@@ -11,15 +11,14 @@ import { Skills } from 'config/StaticData'
 import { splitSkills } from 'utils/HelperFunction'
 
 // Import Interfaces
-import { ISkill } from 'types/Interfaces'
+import { ISkill, ISkillModal } from 'types/Interfaces'
 
 // Import Styles
 import styles from 'styles/SkillSetModal.module.css'
 
-type ISkillSetModal = { isOpen: boolean, onClose(): void }
-
-const SkillList = ({ title, columns, }: { title: string, columns: ISkill[][] }) => {
+const SkillList = ({ title, skills }: { title: string, skills: ISkill[] }) => {
   const emphasis = useColorModeValue('teal.500', 'cyan.200')
+  const columns = splitSkills(skills)
   const [colOne, colTwo = []] = columns
   return (
     <>
@@ -48,39 +47,27 @@ const SkillList = ({ title, columns, }: { title: string, columns: ISkill[][] }) 
     </>
   )
 }
-const SkillSetModal = ({ isOpen, onClose }: ISkillSetModal) => {
-  const backendCols = splitSkills(Skills.backend)
-  const frontendCols = splitSkills(Skills.frontend)
-  const cicdCols = splitSkills(Skills.cicd)
-  const dataBaseCols = splitSkills(Skills.database)
-  const uiFrameWorkCols = splitSkills(Skills['ui frameworks'])
-  const productivityCols = splitSkills(Skills['productivity boost'])
-  const mobileCols = splitSkills(Skills.mobile)
-  const gameCols = splitSkills(Skills.games)
-  const desktopCols = splitSkills(Skills.desktop)
-  return (
-    <Modal isOpen={isOpen} onClose={onClose} motionPreset="slideInBottom" scrollBehavior="inside"    >
-      <ModalOverlay />
-      <ModalContent>
-        <ModalHeader>Full Skill Set List</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody className={styles.skillModal}>
-          <SkillList title="Backend Centric" columns={backendCols} />
-          <SkillList title="Frontend Centric" columns={frontendCols} />
-          <SkillList title="CICD centric" columns={cicdCols} />
-          <SkillList title="Database and Streams" columns={dataBaseCols} />
-          <SkillList title="Ui Frameworks" columns={uiFrameWorkCols} />
-          <SkillList title="Mobile Development" columns={mobileCols} />
-          <SkillList title="Game Development" columns={gameCols} />
-          <SkillList title="Desktop App" columns={desktopCols} />
-          <SkillList title="Productivity boosts" columns={productivityCols} />
-        </ModalBody>
-        <ModalFooter>
-          <Text fontSize="x-small">*Some micro frameworks not included </Text>
-        </ModalFooter>
-      </ModalContent>
-    </Modal>
-  )
-}
+const SkillSetModal = ({ isOpen, onClose }: ISkillModal) => (
+  <Modal isOpen={isOpen} onClose={onClose} motionPreset="slideInBottom" scrollBehavior="inside"    >
+    <ModalOverlay />
+    <ModalContent>
+      <ModalHeader>Full Skill Set List</ModalHeader>
+      <ModalCloseButton />
+      <ModalBody className={styles.skillModal}>
+        <SkillList title="Programming Languages" skills={Skills.languages} />
+        <SkillList title="Frontend" skills={Skills.frontend} />
+        <SkillList title="UI Frameworks" skills={Skills.frameworks} />
+        <SkillList title="Backend" skills={Skills.backend} />
+        <SkillList title="CI/CD" skills={Skills.cicd} />
+        <SkillList title="Database" skills={Skills.database} />
+        <SkillList title="Mobile Development" skills={Skills.mobile} />
+        <SkillList title="Productivity Tools" skills={Skills.productivity} />
+      </ModalBody>
+      <ModalFooter>
+        <Text fontSize="x-small">*Some micro frameworks not included </Text>
+      </ModalFooter>
+    </ModalContent>
+  </Modal>
+)
 
 export default SkillSetModal

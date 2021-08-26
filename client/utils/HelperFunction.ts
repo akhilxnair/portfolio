@@ -18,4 +18,7 @@ export const splitSkills = (srcArray: ISkill[]) => {
   return temporary
 }
 
-export const test = () => null
+export const professionalYears = () => {
+  const currentYear = new Date().getFullYear()
+  return currentYear - 2018
+}

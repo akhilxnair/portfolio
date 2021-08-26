@@ -68,3 +68,8 @@ export type ISkill = {
   name: string
   icon: IconType
 }
+
+export type ISkillModal = {
+  isOpen: boolean
+  onClose(): void
+}
