@@ -1,34 +1,14 @@
 // Import Modules
 import { useEffect, memo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Box, Image as ChkImage, Text, Link, SkeletonCircle, useColorModeValue } from '@chakra-ui/react'
+import { Box, Image as ChkImage, SkeletonCircle } from '@chakra-ui/react'
 
 // Import Config
 import { avatarAnimation } from 'config/Animation'
 
-const AvatarImages = { DarkMode: '/KL_avatar.png', LightMode: './KL_avatar_light.png', }
-
-declare global {
-  export interface Window {
-    preloadedPictures?: HTMLImageElement[]
-  }
-}
 
 const Avatar = () => {
-  const MotionBox = motion(Box)
-  const imgAvatar = useColorModeValue(AvatarImages.LightMode, AvatarImages.DarkMode)
-
-  useEffect(() => {
-    // Some nice preloading and caching
-    const images = [AvatarImages.DarkMode, AvatarImages.LightMode]
-    const preloadedImages = images.map((imageSrc) => {
-      const img = new Image()
-      img.src = imageSrc
-      return img
-    })
-    window.preloadedPictures = preloadedImages
-  }, [])
-
+  const MotionBox = motion(Box);
   return (
     <AnimatePresence>
       <MotionBox
@@ -42,19 +22,13 @@ const Avatar = () => {
         exit={{ opacity: 0 }}
       >
         <ChkImage
-          src={imgAvatar}
+          src="./Me.jpg"
           alt="Akhil Avatar"
           htmlWidth="250"
           htmlHeight="250"
           margin="auto"
           fallback={<SkeletonCircle height="100%" width="100%" />}
         />
-        <Text textAlign="center" fontSize="smaller" variant="description">
-          Art by{' '}
-          <Link href="https://www.linkedin.com/in/akhilxnair/" target="_blank" aria-label="KojiroArt" rel="noreferrer"          >
-            Akhil
-          </Link>
-        </Text>
       </MotionBox>
     </AnimatePresence>
   )

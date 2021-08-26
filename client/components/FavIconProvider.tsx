@@ -8,7 +8,7 @@ const FavIconProvider: FC = ({ children }) => {
   return (
     <>
       <Head>
-        <link rel="icon" href={colorMode === 'dark' ? '/favicon.ico' : '/favicon-lightmode.ico'} />
+        <link rel="icon" href={colorMode === 'dark' ? '/LogoDark.png' : '/LogoLight.png'} />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
