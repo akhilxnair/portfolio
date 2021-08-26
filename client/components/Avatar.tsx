@@ -51,12 +51,7 @@ const Avatar = () => {
         />
         <Text textAlign="center" fontSize="smaller" variant="description">
           Art by{' '}
-          <Link
-            href="https://twitter.com/kojiro_ai"
-            target="_blank"
-            aria-label="KojiroArt"
-            rel="noreferrer"
-          >
+          <Link href="https://twitter.com/kojiro_ai" target="_blank" aria-label="KojiroArt" rel="noreferrer"          >
             Akhil
           </Link>
         </Text>

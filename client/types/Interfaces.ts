@@ -7,6 +7,10 @@ export interface IThemeMode {
   Dark: ColorMode
 }
 
+export type ISkillSetModal = {
+  onOpen(): void
+}
+
 export interface Article {
   id: string
   type_of: string

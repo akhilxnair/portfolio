@@ -5,9 +5,8 @@ import { GiCoffeePot } from 'react-icons/gi'
 import { SiDotNet, SiJavascript, SiTypescript, SiGraphql, SiReact, SiNextDotJs, SiNodeDotJs, SiDocker, } from 'react-icons/si'
 import { Heading, Text, List, ListItem, ListIcon, Icon, SimpleGrid, Box, Tooltip, Stack, useColorModeValue, } from '@chakra-ui/react'
 
-type ISkillSetModal = {
-  onOpen(): void
-}
+// Import Types
+import { ISkillSetModal } from 'types/Interfaces';
 
 const Detail = ({ onOpen }: ISkillSetModal) => {
   const emphasis = useColorModeValue('teal.500', 'cyan.200')

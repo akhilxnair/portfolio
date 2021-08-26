@@ -4,14 +4,14 @@ import { Grid, GridItem, Stack, Box, useBreakpointValue } from '@chakra-ui/react
 
 // Import Components
 import Menu from 'components/Menu'
+import About from 'components/About'
 import Avatar from 'components/Avatar'
 import Sidebar from 'components/Sidebar'
-import About from 'components/About'
+import Experience from 'components/Experience'
 import ScrollMore from 'components/ScrollMore'
+import FeaturedWorks from 'components/FeaturedWorks'
 import OpenGraphHead from 'components/OpenGraphHead'
 import FadeInLayout from 'components/FadeWhenVisible'
-import Experience from 'components/Experience'
-import FeaturedWorks from 'components/FeaturedWorks'
 
 // Import Types
 import { Article } from 'types/Interfaces'
@@ -107,13 +107,7 @@ const Portfolio = ({ articles }: { articles: Article[] }) => {
               </Box>
             </FadeInLayout>
             <FadeInLayout>
-              <Box
-                id="contact"
-                className="contentRow"
-                paddingTop={{ base: 0, lg: 20, xl: 20 }}
-                paddingX={0}
-                flexDirection="row"
-              >
+              <Box id="contact" className="contentRow" paddingTop={{ base: 0, lg: 20, xl: 20 }} paddingX={0} flexDirection="row"              >
                 <GetInTouch />
               </Box>
             </FadeInLayout>
