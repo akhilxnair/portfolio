@@ -87,10 +87,9 @@ export const Skills = {
     { name: 'CSS3', icon: SiCss3 },
     { name: 'React', icon: SiReact },
     { name: 'NextJS', icon: SiNextDotJs },
-    { name: 'Apollo Graphql', icon: SiApollographql },
     { name: 'Redux', icon: SiRedux },
-    { name: 'VueJS', icon: SiVueDotJs },
-    { name: 'Ghost', icon: SiGhost },
+    { name: 'Redux', icon: SiRedux },
+    { name: 'Apollo Graphql', icon: SiApollographql },
   ],
   backend: [{ name: 'Node', icon: SiNodeDotJs }],
   database: [
@@ -103,7 +102,6 @@ export const Skills = {
   ],
   cicd: [
     { name: 'Docker', icon: SiDocker },
-    { name: 'GCP', icon: SiGooglecloud },
     { name: 'GitlabCICD', icon: SiGitlab },
   ],
   frameworks: [

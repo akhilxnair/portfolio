@@ -49,10 +49,9 @@ const GetInTouch = () => {
       </Heading>
       <Text variant="description">
         Though, I am fairly introvert myself. I do reply to messages as long as
-        my human interaction battery last. Coding, work, movies or even weeb
-        stuff, anything is cool. So feel free to message me on any of my social
+        my human interaction battery last. Coding, work, movies, anything is cool. So feel free to message me on any of my social
         media or shoot me an{' '}
-        <Link href="mailto:marcjhon18@gmail.com" target="_blank" rel="noreferrer"        >
+        <Link href="mailto:4khiln4ir@gmail.com" target="_blank" rel="noreferrer"        >
           email
         </Link>
         .

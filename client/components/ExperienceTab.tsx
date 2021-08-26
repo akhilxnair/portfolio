@@ -13,13 +13,12 @@ const ExperienceTab = () => {
 
   const ExperiencesList = [
     {
-      name: 'Scentregroup',
-      longName: 'Scentregroup Limited AU',
-      subDetail: 'via Prosource BPO',
-      url: 'https://www.scentregroup.com/',
-      position: 'Software Engineer',
-      duration: 'Feb 2020 - Present',
-      logo: { light: '/worked_at_logos/scg/SCG_400x400.jpg', dark: '/worked_at_logos/scg/SCG.png', },
+      name: 'FamPay',
+      longName: 'FamPay',
+      url: 'https://fampay.in/',
+      position: 'Frontend Engineer',
+      duration: 'Oct 2020 - Present',
+      logo: { light: '/FamPayLogo.svg', dark: '/FamPayLogo.svg', },
       roles: [
         <>
           Revamping the legacy Partner Portal into a new{' '}
@@ -56,16 +55,12 @@ const ExperienceTab = () => {
       ],
     },
     {
-      name: 'Blotocol',
-      longName: 'Blotocol Philippines',
-      subDetail: 'formerly IVP Global Inc.',
-      url: 'https://blotocol.com/',
-      position: 'Senior Software Engineer',
-      duration: 'Nov 2016 - Feb 2020',
-      logo: {
-        light: '/worked_at_logos/ivp/blotocol_logo-dark.png',
-        dark: '/worked_at_logos/ivp/blotocol-logo-white.png',
-      },
+      name: 'Zuru Tech',
+      longName: 'Zuru Tech India',
+      url: 'https://zuru.tech/',
+      position: 'Frontend Engineer',
+      duration: 'Oct 2018 - Oct 2020',
+      logo: { light: '/ZuruLogo.png', dark: '/ZuruLogo.png', },
       roles: [
         <>
           Developed a Twitter Raffle Campaign / Contest Bot called Camps with
@@ -130,9 +125,6 @@ const ExperienceTab = () => {
                   <Link href={company.url} aria-label="scentregroup" rel="noreferrer" target="_blank" fontSize="lg" fontWeight="bold">
                     #{company.name}
                   </Link>
-                  <Text as="span" textTransform="none" fontSize="x-small" variant="description">
-                    {company.subDetail}
-                  </Text>
                 </Text>
                 <Text fontSize="smaller">{company.duration}</Text>
               </Stack>
