@@ -46,7 +46,7 @@ import {
 } from 'react-icons/si'
 
 // Import Interfaces
-import { ISocialMedias, ISkillCategory, ISkill } from 'types/Interfaces'
+import { ISocialMedias } from 'types/Interfaces'
 
 export const SocialMedias: ISocialMedias[] = [
   {

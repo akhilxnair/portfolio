@@ -1,9 +1,7 @@
+/* eslint-disable react/no-array-index-key */
 // Import Modules
 import { BiRightArrow } from 'react-icons/bi'
 import { Text, Link, Stack, Tabs, TabList, Tab, TabPanels, TabPanel, Image, List, ListIcon, ListItem, SlideFade, Skeleton, useColorModeValue, useBreakpointValue, useColorMode } from '@chakra-ui/react'
-
-// Import Congif
-import { ExperiencesList } from 'components/ExperienceList';
 
 const ExperienceTab = () => {
   const { colorMode } = useColorMode()
@@ -12,6 +10,83 @@ const ExperienceTab = () => {
   const activeBordercolor = useColorModeValue('teal.500', '#97DFFC')
   const tabOrientation = useBreakpointValue({ base: 'horizontal', sm: 'horizontal', md: 'vertical', lg: 'vertical', xl: 'vertical' }) ?? ('vertical' as any)
   const tabMinWidth = useBreakpointValue({ base: '160px', sm: '160px', md: 'auto', lg: 'auto', xl: 'auto' })
+
+  const ExperiencesList = [
+    {
+      name: 'Scentregroup',
+      longName: 'Scentregroup Limited AU',
+      subDetail: 'via Prosource BPO',
+      url: 'https://www.scentregroup.com/',
+      position: 'Software Engineer',
+      duration: 'Feb 2020 - Present',
+      logo: { light: '/worked_at_logos/scg/SCG_400x400.jpg', dark: '/worked_at_logos/scg/SCG.png', },
+      roles: [
+        <>
+          Revamping the legacy Partner Portal into a new{' '}
+          <Link aria-label="Westfield Marketing Hub" href="https://partner.scentregroup.com/" target="_blank" rel="noreferrer">
+            Westfield Marketing Hub
+          </Link>{' '}
+          using NextJS and Typescript. Restructuring the old express backend app
+          into a newer design approach.
+        </>,
+        <>
+          Created multiple Contentful and Bynder extensions to improve BX process
+          better.
+        </>,
+        <>
+          Worked on maintaining{' '}
+          <Link variant="primaryLink" href="https://www.westfield.com.au/" target="_blank" rel="noreferrer"        >
+            Westfield
+          </Link>
+          {' '}main site and Graphql apis written in NodeJS.
+        </>,
+        <>
+          Migrating of existing marketing emails related tools and batches from
+          Responsys into the new platform called Braze.
+        </>,
+        <>
+          Hired at early 2020, first big task was helping with selection a new
+          marketing vendor that can scale as well as enable us to have
+          personalisation, selecting{' '}
+          <Link aria-label="Braze" href="https://www.braze.com/" target="_blank" rel="noreferrer"        >
+            Braze
+          </Link>{' '}
+          as a result.
+        </>,
+      ],
+    },
+    {
+      name: 'Blotocol',
+      longName: 'Blotocol Philippines',
+      subDetail: 'formerly IVP Global Inc.',
+      url: 'https://blotocol.com/',
+      position: 'Senior Software Engineer',
+      duration: 'Nov 2016 - Feb 2020',
+      logo: {
+        light: '/worked_at_logos/ivp/blotocol_logo-dark.png',
+        dark: '/worked_at_logos/ivp/blotocol-logo-white.png',
+      },
+      roles: [
+        <>
+          Developed a Twitter Raffle Campaign / Contest Bot called Camps with
+          statistics similar to Facebook Ads.
+        </>,
+        <>
+          In 2019 got promoted as Senior Software Engineer and worked with Cryto
+          Exchange, Smart Contracts and other APIs using several techs such as
+          NodeJS, .NET Core and React.
+        </>,
+        <>
+          Create highly scalable Japanese e-commerce sites. Most notable clients
+          were TV Tokyo, Layla EC using .NET.
+        </>,
+        <>
+          Hired at 2016, Undergone a training first with Japanese language.
+          Shortly after, worked with in-house .NET MVC Framework called ERS.
+        </>,
+      ],
+    },
+  ]
 
   return (
     <Tabs id="experienceTabs" orientation={tabOrientation} isLazy>
@@ -63,13 +138,7 @@ const ExperienceTab = () => {
               </Stack>
               <List spacing={3} pt={5}>
                 {company.roles?.map((roleDesc, idx) => (
-                  <ListItem
-                    key={`${company.name}-desc-${idx}`}
-                    fontSize="smaller"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="flex-start"
-                  >
+                  <ListItem key={idx} fontSize="smaller" display="flex" alignItems="center" justifyContent="flex-start">
                     <ListIcon as={BiRightArrow} color={emphasis} display="block" />
                     <Text as="span" display="block" variant="description">
                       {roleDesc}

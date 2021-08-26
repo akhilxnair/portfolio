@@ -1,6 +1,6 @@
 // Import Modules
 import { IconType } from 'react-icons'
-import { ColorMode } from '@chakra-ui/react'
+import { ColorMode, ResponsiveValue } from '@chakra-ui/react'
 
 export interface IThemeMode {
   Light: ColorMode
@@ -9,6 +9,17 @@ export interface IThemeMode {
 
 export type ISkillSetModal = {
   onOpen(): void
+}
+
+export type IFeaturedCard = {
+  height: string | ResponsiveValue<any>
+  src: string
+  idx: number
+  title: string
+  description: string
+  objectPosition?: string
+  ctaUrl: string
+  isMobile?: boolean
 }
 
 export interface Article {

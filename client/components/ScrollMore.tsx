@@ -82,7 +82,7 @@ const ScrollMore = () => {
                 marginTop: '10px',
               }}
             >
-              marcjhon@gmail.com{' '}
+              4khiln4ir@gmail.com{' '}
             </Text>
           </motion.div>
         )}

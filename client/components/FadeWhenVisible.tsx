@@ -1,12 +1,12 @@
 // Import Modules
-import { useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 // Import Config
 import { fadeInUpSlower } from 'config/Animation'
 
-const FadeInWhenVisible = ({ children }) => {
+const FadeInWhenVisible: FC = ({ children }) => {
   const controls = useAnimation()
   const [ref, inView] = useInView({ threshold: 0.3 })
 

@@ -1,6 +1,6 @@
 // Import Modules
 import { motion } from 'framer-motion'
-import { Box, Image, ResponsiveValue, Divider, Skeleton, Text, SimpleGrid, Button, Container, Stack, useColorModeValue } from '@chakra-ui/react'
+import { Box, Image, Divider, Skeleton, Text, SimpleGrid, Button, Container, Stack, useColorModeValue } from '@chakra-ui/react'
 
 // Import Config
 import { easing, DURATIONS } from 'config/Animation'
@@ -8,16 +8,8 @@ import { easing, DURATIONS } from 'config/Animation'
 // Import Styles
 import styles from 'styles/FeaturedCard.module.css'
 
-export type FeaturedCardProps = {
-  height: string | ResponsiveValue<any>
-  src: string
-  idx: number
-  title: string
-  description: string
-  objectPosition?: string
-  ctaUrl: string
-  isMobile?: boolean
-}
+// Import Types
+import { IFeaturedCard } from 'types/Interfaces'
 
 const variants = {
   normal: { opacity: 0.85 },
@@ -36,7 +28,7 @@ const variants = {
 const MotionImage = motion(Image)
 
 const ProjectDescription = ({ idx, title, description, ctaUrl, isLeft, }: {
-  idx?: number
+  idx: number
   title: string
   description: string
   ctaUrl: string
@@ -94,7 +86,7 @@ const ProjectDescription = ({ idx, title, description, ctaUrl, isLeft, }: {
   </Container>
 )
 
-const FeaturedCard = ({ idx, height, src, title, description, objectPosition, ctaUrl, isMobile }: FeaturedCardProps) => {
+const FeaturedCard = ({ idx, height, src, title, description, objectPosition, ctaUrl, isMobile }: IFeaturedCard) => {
   const isLeftImage = isMobile ? false : idx % 2 === 0
   const bg = useColorModeValue('blackAlpha.50', 'whiteAlpha.200')
   const CoverImage = () => (
