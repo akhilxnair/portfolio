@@ -1,5 +1,5 @@
 // Import Modules
-import { useEffect, memo } from 'react'
+import { memo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Box, Image as ChkImage, SkeletonCircle } from '@chakra-ui/react'
 

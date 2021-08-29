@@ -2,7 +2,7 @@
 import { memo } from 'react'
 import { IoMdOpen } from 'react-icons/io'
 import { GiCoffeePot } from 'react-icons/gi'
-import { SiJavascript, SiTypescript, SiJest, SiReact, SiNextDotJs, SiNodeDotJs, SiPostgresql } from 'react-icons/si'
+import { SiJavascript, SiTypescript, SiJest, SiReact, SiNextDotJs, SiNodeDotJs } from 'react-icons/si'
 import { Heading, Text, List, ListItem, ListIcon, Icon, SimpleGrid, Box, Tooltip, Stack, useColorModeValue, } from '@chakra-ui/react'
 
 // Import Utils
