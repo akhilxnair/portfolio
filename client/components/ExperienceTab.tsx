@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 // Import Modules
 import { BiRightArrow } from 'react-icons/bi'
-import { Text, Link, Stack, Tabs, TabList, Tab, TabPanels, TabPanel, List, ListIcon, ListItem, SlideFade, useColorModeValue, useBreakpointValue, useColorMode } from '@chakra-ui/react'
+import { Text, Link, Stack, Tabs, TabList, Tab, TabPanels, TabPanel, List, ListIcon, Skeleton, ListItem, Image, SlideFade, useColorModeValue, useBreakpointValue, useColorMode } from '@chakra-ui/react'
 
 const ExperienceTab = () => {
   const { colorMode } = useColorMode()
@@ -114,11 +114,11 @@ const ExperienceTab = () => {
             }}
             borderBottomWidth={tabOrientation === 'horizontal' ? '4px' : '0'}
           >
-            <img
+            <Image
               src={colorMode === 'dark' ? company.dark : company.light}
               alt={company.name}
-              width={88}
-              height={30}
+              maxWidth="88px"
+              fallback={<Skeleton height="100%" width="100%" />}
             />
           </Tab>
         ))}
