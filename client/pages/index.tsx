@@ -82,7 +82,7 @@ const Portfolio = ({ articles }: { articles: Article[] }) => {
                 <Experience />
               </Box>
             </FadeInLayout>
-            <FadeInLayout>
+            {/* <FadeInLayout>
               <Box
                 id="works"
                 className="contentRow"
@@ -105,7 +105,7 @@ const Portfolio = ({ articles }: { articles: Article[] }) => {
               >
                 <DevToArticles articles={articles} />
               </Box>
-            </FadeInLayout>
+            </FadeInLayout> */}
             <FadeInLayout>
               <Box id="contact" className="contentRow" paddingTop={{ base: 0, lg: 20, xl: 20 }} paddingX={0} flexDirection="row"              >
                 <GetInTouch />

@@ -35,7 +35,6 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
           </Text>
         </Tooltip>
         <b> {', '}Deployment </b>,
-        <b> {' '}Performance</b>,
         and a bit of <b>Backend</b> for personal projects.
         <br /> <br />
         Here are few main techs that are cup of my{' '}

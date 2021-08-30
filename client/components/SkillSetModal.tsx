@@ -56,12 +56,16 @@ const SkillSetModal = ({ isOpen, onClose }: ISkillModal) => (
       <ModalBody className={styles.skillModal}>
         <SkillList title="Programming Languages" skills={Skills.languages} />
         <SkillList title="Frontend" skills={Skills.frontend} />
-        <SkillList title="UI Frameworks" skills={Skills.frameworks} />
+        <SkillList title="Modern CSS" skills={Skills.css} />
+        <SkillList title="State Management" skills={Skills.state} />
+        <SkillList title="Testing" skills={Skills.testing} />
+        <SkillList title="Tracking" skills={Skills.tracking} />
+        <SkillList title="Frontend Tools & Libraries" skills={Skills.libraries} />
         <SkillList title="Backend" skills={Skills.backend} />
         <SkillList title="CI/CD" skills={Skills.cicd} />
-        <SkillList title="Database" skills={Skills.database} />
+        <SkillList title="Database (Novice)" skills={Skills.database} />
         <SkillList title="Mobile Development" skills={Skills.mobile} />
-        <SkillList title="Productivity Tools" skills={Skills.productivity} />
+        <SkillList title="Productivity" skills={Skills.productivity} />
       </ModalBody>
       <ModalFooter>
         <Text fontSize="x-small">*Some micro frameworks not included </Text>
