@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Akhil Nair's Personal Site
+
+Hey there! Akhil here. This is a v2 of my portfolio site, a complete rewrite from v1 which is shamefully a template I edited a bit back on 2018. I wanted to try out what I can do on my own in regards to UI and UX design so I reckon why not start with my porfolio.
+
+This is written in Typescript using [Next.js](https://nextjs.org/), as a SSG tool. It utilizes [ChakraUI](https://chakra-ui.com/) as well as [Framer Motion](https://www.framer.com/motion/) for animations.
+
+This contains bits of my details. In future I am planning to get this to cater my own blog too but for now will use dev.to links.
+
+Site is Currently deployed at <b>Vercel</b>'s Free tier .
+
+## Demo
+
+<img src="./public/demo.gif" alt="DEMO" />
+
+## Local Development
+
+This is just a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Please use atleast Node v12, but the recommended version is Node v14 LTS. There's a `.nvmrc`, you can run `nvm use` if you have nvm installed.
 
 ## Getting Started
 
-First, run the development server:
+This project heavily favors <b>yarn</b> over npm.
+
+So to set things up you need to run
 
 ```bash
-npm run dev
-# or
+yarn install
+```
+
+or just
+
+```bash
+yarn
+```
+
+Then to run the development server:
+
+```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+and it should open at
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+> http://localhost:3000/
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Deployment
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Nothing special, its setup at Vercel end (irrc: no `Vercel.toml`), just merge a feat branch to master branch and you're good.
 
-## Learn More
+## Credits
 
-To learn more about Next.js, take a look at the following resources:
+And of course
+Made with Love and :coffee:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+AxN
