@@ -21,10 +21,8 @@ const FeaturedWorksSection = () => {
         Some of my works.
       </Heading>
       <Text variant="description">
-        Checkout some of my works I did at freelancing, company projects and
-        even case studies.
+        Checkout some of my works I did at freelancing, company projects and even case studies.
       </Text>
-
       <MotionGrid templateRows="repeat(1, 1fr)" templateColumns="repeat(6, 1fr)" gap={{ base: 5, md: 6 }} variants={galleryStagger}      >
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
@@ -50,7 +48,6 @@ const FeaturedWorksSection = () => {
             isMobile={isMobile}
           />
         </MotionGridItem>
-
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={3}

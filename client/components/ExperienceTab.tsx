@@ -8,8 +8,8 @@ const ExperienceTab = () => {
   const emphasis = useColorModeValue('teal.500', 'cyan.200')
   const borderColor = useColorModeValue('gray.300', 'gray.600')
   const activeBorderColor = useColorModeValue('teal.500', '#97DFFC')
-  const tabOrientation = useBreakpointValue({ base: 'horizontal', sm: 'horizontal', md: 'vertical', lg: 'vertical', xl: 'vertical' }) ?? ('vertical' as any)
   const tabMinWidth = useBreakpointValue({ base: '160px', sm: '160px', md: 'auto', lg: 'auto', xl: 'auto' })
+  const tabOrientation = useBreakpointValue({ base: 'horizontal', sm: 'horizontal', md: 'vertical', lg: 'vertical', xl: 'vertical' }) ?? ('vertical' as any)
 
   const ExperiencesList = [
     {
@@ -18,8 +18,7 @@ const ExperienceTab = () => {
       position: 'Frontend Engineer',
       duration: 'Oct 2020 - Present',
       subDetail: 'FinTech for Teenagers',
-      light: '/images/FamPayDark.png',
-      dark: '/images/FamPayLight.png',
+      logo: `/images/fampay_${colorMode}.png`,
       roles: [
         <>
           Creating Web views and PAW&apos;s for
@@ -61,8 +60,7 @@ const ExperienceTab = () => {
       url: 'https://zuru.tech/',
       position: 'Frontend Engineer',
       duration: 'Oct 2018 - Oct 2020',
-      light: '/images/ZuruDark.png',
-      dark: '/images/ZuruLight.png',
+      logo: `/images/zuru_${colorMode}.png`,
       roles: [
         <>
           Creating scalable web applications using React which were implemented inside our
@@ -98,28 +96,23 @@ const ExperienceTab = () => {
       <TabList width="30%" borderColor="transparent">
         {ExperiencesList.map((company) => (
           <Tab
-            key={`Tab-${company.name}`}
-            fontSize="smaller"
             h="120px"
-            minWidth={tabMinWidth}
             boxShadow="none"
+            fontSize="smaller"
+            minWidth={tabMinWidth}
             borderColor={borderColor}
+            key={`Tab-${company.name}`}
             borderLeftWidth={tabOrientation === 'vertical' ? '4px' : '0'}
+            borderBottomWidth={tabOrientation === 'horizontal' ? '4px' : '0'}
             _selected={{
-              borderColor: activeBorderColor,
               boxShadow: 'none',
+              background: 'whiteAlpha.100',
+              borderColor: activeBorderColor,
               borderLeftWidth: tabOrientation === 'vertical' ? '4px' : '0',
               borderBottomWidth: tabOrientation === 'horizontal' ? '4px' : '0',
-              background: 'whiteAlpha.100',
             }}
-            borderBottomWidth={tabOrientation === 'horizontal' ? '4px' : '0'}
           >
-            <Image
-              src={colorMode === 'dark' ? company.dark : company.light}
-              alt={company.name}
-              maxWidth="88px"
-              fallback={<Skeleton height="100%" width="100%" />}
-            />
+            <Image src={company.logo} alt={company.name} maxWidth="88px" fallback={<Skeleton height="100%" width="100%" />} />
           </Tab>
         ))}
       </TabList>
@@ -136,7 +129,7 @@ const ExperienceTab = () => {
                     {company.name}
                   </Link>
                   <Text as="span" textTransform="none" fontSize="small" variant="description">
-                    {' '} {company.subDetail}
+                    {' '}{company.subDetail}
                   </Text>
                 </Text>
                 <Text fontSize="smaller">{company.duration}</Text>

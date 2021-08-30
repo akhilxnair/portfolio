@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useColorMode, Image, useBreakpointValue } from '@chakra-ui/react'
 
 // Import Config
-import { ThemeMode, mobileBreakpointsMap } from 'config/ThemeConfig'
+import { mobileBreakpointsMap } from 'config/ThemeConfig'
 import { simpleOpacity } from 'config/Animation'
 
 // Import Styles
@@ -16,23 +16,22 @@ const Logo = () => {
   const { colorMode } = useColorMode()
   const [isLogoLoaded, setLogoLoaded] = useState(false)
   const isMobile = useBreakpointValue(mobileBreakpointsMap)
-  const image = colorMode === ThemeMode.Dark ? './images/LogoDark.png' : './images/LogoLight.png'
 
   return (
     <AnimatePresence>
       <Link href="/" passHref>
         <MotionImage
-          className={!isMobile ? styles.logo : ''}
-          boxSize={isMobile ? '30px' : '50px'}
-          objectFit="cover"
-          src={image}
-          alt="Akhil Logo"
-          fallbackSrc="./LogoDark.png"
-          variants={simpleOpacity}
-          initial="initial"
-          animate={isLogoLoaded && 'animate'}
-          onLoad={() => setLogoLoaded(true)}
           zIndex={2}
+          alt="Akhil Logo"
+          initial="initial"
+          objectFit="cover"
+          variants={simpleOpacity}
+          fallbackSrc="./images/logo_dark.png"
+          onLoad={() => setLogoLoaded(true)}
+          animate={isLogoLoaded && 'animate'}
+          boxSize={isMobile ? '30px' : '50px'}
+          src={`./images/logo_${colorMode}.png`}
+          className={!isMobile ? styles.logo : ''}
         />
       </Link>
     </AnimatePresence>

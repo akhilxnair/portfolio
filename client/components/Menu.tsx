@@ -39,12 +39,7 @@ const Menu = () => {
   }, [isMobile, controls, scrollDirection])
 
   return (
-    <motion.div
-      initial={isMobile ? 'hidden' : false}
-      variants={mobileMenuVariants}
-      animate={controls}
-      className={isMobile ? styles.mobileMenuContainer : ''}
-    >
+    <motion.div initial={isMobile ? 'hidden' : false} variants={mobileMenuVariants} animate={controls} className={isMobile ? styles.mobileMenuContainer : ''}    >
       <Container
         display="flex"
         alignItems="center"

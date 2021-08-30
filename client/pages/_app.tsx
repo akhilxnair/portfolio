@@ -1,7 +1,8 @@
 // Import Modules
+import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { AnimatePresence } from 'framer-motion'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, useColorMode } from '@chakra-ui/react'
 
 // Import Config
 import theme from 'config/ThemeConfig'
@@ -9,16 +10,19 @@ import theme from 'config/ThemeConfig'
 // Import Styles
 import 'styles/Global.css'
 
-// Import Components
-import FavIconProvider from 'components/FavIconProvider'
-
-const KLSite = ({ Component, pageProps }: AppProps) => (
-  <AnimatePresence exitBeforeEnter>
-    <ChakraProvider theme={theme}>
-      <FavIconProvider>
+const KLSite = ({ Component, pageProps }: AppProps) => {
+  const { colorMode } = useColorMode()
+  return (
+    <AnimatePresence exitBeforeEnter>
+      <Head>
+        <link rel="icon" href={`/images/logo_${colorMode}.png`} />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <ChakraProvider theme={theme}>
         <Component {...pageProps} />
-      </FavIconProvider>
-    </ChakraProvider>
-  </AnimatePresence>
-)
+      </ChakraProvider>
+    </AnimatePresence>
+  )
+}
 export default KLSite

@@ -38,22 +38,8 @@ const Navigation = () => {
   const scrollDirection = useScrollDirection()
   return (
     <>
-      <Box
-        display={{ base: 'flex', xl: 'none' }}
-        alignItems="center"
-        paddingTop={1}
-        className={styles.menuBar}
-        zIndex={100}
-        top="3%"
-      >
-        <IconButton
-          aria-label="Color Mode"
-          variant="ghost"
-          icon={<Icon />}
-          boxShadow="none"
-          onClick={toggleColorMode}
-          padding={0}
-        />
+      <Box display={{ base: 'flex', xl: 'none' }} alignItems="center" paddingTop={1} className={styles.menuBar} zIndex={100} top="3%">
+        <IconButton aria-label="Color Mode" variant="ghost" icon={<Icon />} boxShadow="none" onClick={toggleColorMode} padding={0} />
         <MobileMenu isDarkMode={IsDark} toggle={toggleOpen} isOpen={isOpen} />
       </Box>
 
@@ -159,14 +145,7 @@ const Navigation = () => {
           </Box>
           {!isMobile && (
             <Box>
-              <IconButton
-                marginX={1}
-                aria-label="Color Mode"
-                variant="ghost"
-                icon={<Icon />}
-                boxShadow="none"
-                onClick={toggleColorMode}
-              />
+              <IconButton marginX={1} aria-label="Color Mode" variant="ghost" icon={<Icon />} boxShadow="none" onClick={toggleColorMode} />
             </Box>
           )}
         </Flex>

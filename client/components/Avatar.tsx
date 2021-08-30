@@ -20,7 +20,7 @@ const Avatar = () => {
         variants={avatarAnimation}
         exit={{ opacity: 0 }}
       >
-        <ChkImage src="./images/Me.jpg" alt="Akhil Avatar" htmlWidth="250" htmlHeight="250" margin="auto" fallback={<SkeletonCircle height="100%" width="100%" />} />
+        <ChkImage src="./images/me.jpg" alt="Akhil Avatar" htmlWidth="250" htmlHeight="250" margin="auto" fallback={<SkeletonCircle height="100%" width="100%" />} />
       </MotionBox>
     </AnimatePresence>
   )

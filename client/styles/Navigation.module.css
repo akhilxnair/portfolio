@@ -1,13 +1,11 @@
-
-
-.menu{
+.menu {
   position: fixed;
-  top:0;
+  top: 0;
   right: 3.5%;
   z-index: 1;
 }
 
-.blogBtn{
+.blogBtn {
   color: inherit;
   text-decoration: underline 0.15em rgba(255, 255, 255, 0);
   border-bottom: 1px solid transparent;
@@ -20,7 +18,7 @@
 .blogBtn:hover,
 .blogBtn:focus,
 .blogBtn:active {
-  text-decoration-color: #97DFFC;
+  text-decoration-color: #97dffc;
   background-color: transparent;
 }
 
