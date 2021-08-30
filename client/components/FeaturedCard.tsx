@@ -53,8 +53,7 @@ const ProjectDescription = ({ idx, title, description, ctaUrl, isLeft, }: {
         as="span"
       >
         <Text variant="accentAlternative" fontSize="md" as="span">
-          #0{idx}
-          {'  '}
+          #0{idx} {'  '}
         </Text>
         {title}
       </Text>
@@ -107,20 +106,9 @@ const FeaturedCard = ({ idx, height, src, title, description, objectPosition, ct
 
   return (
     <Box height="auto" bg={bg} borderRadius="1em" className={styles.featureCard} borderColor={bg} borderWidth="1px"    >
-      <SimpleGrid
-        columns={{ base: 1, md: 2 }}
-        spacing={{ base: 3, md: 0 }}
-        display={{ base: 'flex', md: 'grid' }}
-        flexDirection={{ base: 'column-reverse', md: 'initial' }}
-      >
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 3, md: 0 }} display={{ base: 'flex', md: 'grid' }} flexDirection={{ base: 'column-reverse', md: 'initial' }}      >
         {isLeftImage && <CoverImage />}
-        <ProjectDescription
-          idx={idx}
-          title={title}
-          description={description}
-          ctaUrl={ctaUrl}
-          isLeft={isLeftImage}
-        />
+        <ProjectDescription idx={idx} title={title} description={description} ctaUrl={ctaUrl} isLeft={isLeftImage} />
         {!isLeftImage && <CoverImage />}
       </SimpleGrid>
     </Box>

@@ -29,20 +29,11 @@ const rimuruVariant: Variants = {
 const GetInTouch = () => {
   const [ref, inView] = useInView()
   return (
-    <Stack
-      width={{ base: '99%', lg: '60%', xl: '75%' }}
-      height="100%"
-      spacing={{ base: 6, xl: 8 }}
-    >
+    <Stack width={{ base: '99%', lg: '60%', xl: '75%' }} height="100%" spacing={{ base: 6, xl: 8 }}    >
       <Heading size="2xl" style={{ fontVariantCaps: 'small-caps', }}      >
         Say hi!{' '}
         <Text as="span" fontSize="2xl" variant="emphasis">
-          <motion.div
-            style={{ display: 'inline-block' }}
-            variants={rimuruVariant}
-            ref={ref}
-            animate={inView ? ['shake', 'jump'] : false}
-          >
+          <motion.div style={{ display: 'inline-block' }} variants={rimuruVariant} ref={ref} animate={inView ? ['shake', 'jump'] : false}          >
             (⁀ᗢ⁀)
           </motion.div>
         </Text>
@@ -56,13 +47,7 @@ const GetInTouch = () => {
         </Link>
         .
       </Text>
-      <Box
-        spacing={0.5}
-        textAlign="center"
-        fontFamily="monospace"
-        paddingTop={{ base: 10, lg: 20, xl: 20 }}
-        paddingBottom={{ base: 5, lg: 18 }}
-      >
+      <Box spacing={0.5} textAlign="center" fontFamily="monospace" paddingTop={{ base: 10, lg: 20, xl: 20 }} paddingBottom={{ base: 5, lg: 18 }}      >
         <Link
           variant="description"
           textDecoration="none"

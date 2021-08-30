@@ -63,7 +63,6 @@ const FeaturedWorksSection = () => {
             isMobile={isMobile}
           />
         </MotionGridItem>
-
         <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
           <FeaturedCard
             idx={4}

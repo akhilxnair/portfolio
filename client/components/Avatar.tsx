@@ -6,7 +6,6 @@ import { Box, Image as ChkImage, SkeletonCircle } from '@chakra-ui/react'
 // Import Config
 import { avatarAnimation } from 'config/Animation'
 
-
 const Avatar = () => {
   const MotionBox = motion(Box);
   return (
@@ -21,14 +20,7 @@ const Avatar = () => {
         variants={avatarAnimation}
         exit={{ opacity: 0 }}
       >
-        <ChkImage
-          src="./Me.jpg"
-          alt="Akhil Avatar"
-          htmlWidth="250"
-          htmlHeight="250"
-          margin="auto"
-          fallback={<SkeletonCircle height="100%" width="100%" />}
-        />
+        <ChkImage src="./Me.jpg" alt="Akhil Avatar" htmlWidth="250" htmlHeight="250" margin="auto" fallback={<SkeletonCircle height="100%" width="100%" />} />
       </MotionBox>
     </AnimatePresence>
   )

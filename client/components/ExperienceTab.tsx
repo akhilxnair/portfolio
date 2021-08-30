@@ -7,7 +7,7 @@ const ExperienceTab = () => {
   const { colorMode } = useColorMode()
   const emphasis = useColorModeValue('teal.500', 'cyan.200')
   const borderColor = useColorModeValue('gray.300', 'gray.600')
-  const activeBordercolor = useColorModeValue('teal.500', '#97DFFC')
+  const activeBorderColor = useColorModeValue('teal.500', '#97DFFC')
   const tabOrientation = useBreakpointValue({ base: 'horizontal', sm: 'horizontal', md: 'vertical', lg: 'vertical', xl: 'vertical' }) ?? ('vertical' as any)
   const tabMinWidth = useBreakpointValue({ base: '160px', sm: '160px', md: 'auto', lg: 'auto', xl: 'auto' })
 
@@ -23,25 +23,25 @@ const ExperienceTab = () => {
         <>
           Creating Web views and PAW&apos;s for
           <Link aria-label="Fampay" href="https://play.google.com/store/apps/details?id=com.fampay.in&hl=en_IN&gl=US" target="_blank" rel="noreferrer">
-            {' '} FamPay App {' '}
+            {' '}FamPay App{' '}
           </Link>
           serving 2 Million+ users using modern frontend technologies.
         </>,
         <>
           Create and maintain
           <Link variant="primaryLink" href="https://i.imgur.com/0wjhJUa.mp4" target="_blank" rel="noreferrer"        >
-            {' '} Explore {' '}
+            {' '}Explore{' '}
           </Link>
           section which drives the Gamification of the entire application through multiple types of rewards such as Raffles, Spinners, etc.
         </>,
         <>
           Build and Maintain
           <Link variant="primaryLink" href="https://gift.fam.cards/" target="_blank" rel="noreferrer"        >
-            {' '} Gift a FamCard {' '}
+            {' '}Gift a FamCard{' '}
           </Link>
           , Savings Goal,
           <Link variant="primaryLink" href="https://i.imgur.com/2jcyM9w.jpg" target="_blank" rel="noreferrer"        >
-            {' '} IPL Predictions {' '}
+            {' '}IPL Predictions{' '}
           </Link>
           , Landing Page and multiple other web projects using React JS and related technologies.
         </>,
@@ -65,7 +65,7 @@ const ExperienceTab = () => {
         <>
           Creating scalable web applications using React which were implemented inside our
           <Link variant="primaryLink" href="https://www.youtube.com/watch?v=DPdvNVxgQQY" target="_blank" rel="noreferrer"        >
-            {' '} Dreamcatcher {' '}
+            {' '}Dreamcatcher{' '}
           </Link>
           desktop software using custom chromium headless browser.
         </>,
@@ -75,7 +75,7 @@ const ExperienceTab = () => {
         <>
           Maintainer of
           <Link variant="primaryLink" href="https://i.imgur.com/ohp50kK.png" target="_blank" rel="noreferrer"        >
-            {' '}  Zuru Store  {' '}
+            {' '}Zuru Store{' '}
           </Link>
           which displayed all information about the architectures and buildings. My role was to actively review code, maintain and build new features.
         </>,
@@ -104,7 +104,7 @@ const ExperienceTab = () => {
             borderColor={borderColor}
             borderLeftWidth={tabOrientation === 'vertical' ? '4px' : '0'}
             _selected={{
-              borderColor: activeBordercolor,
+              borderColor: activeBorderColor,
               boxShadow: 'none',
               borderLeftWidth: tabOrientation === 'vertical' ? '4px' : '0',
               borderBottomWidth: tabOrientation === 'horizontal' ? '4px' : '0',
@@ -134,8 +134,7 @@ const ExperienceTab = () => {
                     {company.name}
                   </Link>
                   <Text as="span" textTransform="none" fontSize="small" variant="description">
-                    {' '}
-                    {company.subDetail}
+                    {' '} {company.subDetail}
                   </Text>
                 </Text>
                 <Text fontSize="smaller">{company.duration}</Text>
