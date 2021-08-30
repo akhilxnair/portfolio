@@ -1,7 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 // Import Modules
 import { BiRightArrow } from 'react-icons/bi'
-import { Text, Link, Stack, Tabs, TabList, Tab, TabPanels, TabPanel, Image, List, ListIcon, ListItem, SlideFade, Skeleton, useColorModeValue, useBreakpointValue, useColorMode } from '@chakra-ui/react'
+import Image from 'next/image';
+import { Text, Link, Stack, Tabs, TabList, Tab, TabPanels, TabPanel, List, ListIcon, ListItem, SlideFade, useColorModeValue, useBreakpointValue, useColorMode } from '@chakra-ui/react'
 
 const ExperienceTab = () => {
   const { colorMode } = useColorMode()
@@ -18,11 +19,12 @@ const ExperienceTab = () => {
       position: 'Frontend Engineer',
       duration: 'Oct 2020 - Present',
       subDetail: 'FinTech for Teenagers',
-      logo: { light: '/FamPayLogoLight.png', dark: '/FamPayLogoDark.png' },
+      light: '/FamPayDark.png',
+      dark: '/FamPayLight.png',
       roles: [
         <>
           Creating Web views and PAW&apos;s for
-          <Link aria-label="Fampay" href="https://play.google.com/store/apps/details?id=com.fampay.in&hl=en_IN&gl=US" target="_blank" rel="noreferrer">
+          <Link aria-label="FamPay" href="https://play.google.com/store/apps/details?id=com.fampay.in&hl=en_IN&gl=US" target="_blank" rel="noreferrer">
             {' '}FamPay App{' '}
           </Link>
           serving 2 Million+ users using modern frontend technologies.
@@ -46,7 +48,7 @@ const ExperienceTab = () => {
           , Landing Page and multiple other web projects using React JS and related technologies.
         </>,
         <>
-          Work with backend team to build and maintain deployment pipelines for all out projects using Docker and Gitlab CI/CD.
+          Work with backend team to build and maintain deployment pipelines for all out projects using Docker and GitLab CI/CD.
         </>,
         <>
           Hired in Oct 2020, so as the first fulltime Frontend Developer,
@@ -60,7 +62,8 @@ const ExperienceTab = () => {
       url: 'https://zuru.tech/',
       position: 'Frontend Engineer',
       duration: 'Oct 2018 - Oct 2020',
-      logo: { light: '/ZuruLogoDark.png', dark: '/ZuruLogoLight.png', },
+      light: '/ZuruDark.png',
+      dark: '/ZuruLight.png',
       roles: [
         <>
           Creating scalable web applications using React which were implemented inside our
@@ -113,10 +116,10 @@ const ExperienceTab = () => {
             borderBottomWidth={tabOrientation === 'horizontal' ? '4px' : '0'}
           >
             <Image
-              src={colorMode === 'dark' ? company.logo.dark : company.logo.light}
+              src={colorMode === 'dark' ? company.dark : company.light}
               alt={company.name}
-              maxWidth="88px"
-              fallback={<Skeleton height="100%" width="100%" />}
+              width={88}
+              height={30}
             />
           </Tab>
         ))}
@@ -130,7 +133,7 @@ const ExperienceTab = () => {
                   {company.position}
                 </Text>
                 <Text as="span">
-                  <Link href={company.url} aria-label="scentregroup" rel="noreferrer" target="_blank" fontSize="lg" fontWeight="bold">
+                  <Link href={company.url} aria-label={company.name} rel="noreferrer" target="_blank" fontSize="lg" fontWeight="bold">
                     {company.name}
                   </Link>
                   <Text as="span" textTransform="none" fontSize="small" variant="description">

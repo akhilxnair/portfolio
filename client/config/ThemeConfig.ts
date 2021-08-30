@@ -48,7 +48,9 @@ const theme = extendTheme({
   styles,
   components: {
     Link: {
-      baseStyle: (props) => ({ color: mode('teal.500', 'cyan.200')(props) }),
+      baseStyle: (props: any) => ({
+        color: mode('teal.500', 'cyan.200')(props),
+      }),
       variants: {
         ...textVariants,
         description: (props: ThemeComponentProps<ChakraTheme>) => ({
@@ -64,10 +66,10 @@ const theme = extendTheme({
     Heading: { variants: textVariants },
     Button: {
       variants: {
-        outline: (props) => ({
+        outline: (props: any) => ({
           borderColor: mode('black.400', 'cyan.200')(props),
         }),
-        outlineAlternative: (props) => ({
+        outlineAlternative: (props: any) => ({
           borderWidth: '1px',
           borderRadius: 0,
           borderColor: mode('#595959', 'whiteAlpha.500')(props),
@@ -82,14 +84,14 @@ const theme = extendTheme({
     },
     Icon: {
       variants: {
-        accent: (props) => ({
+        accent: (props: any) => ({
           borderColor: mode('gray.800', 'gray.400')(props),
         }),
       },
     },
     Divider: {
       variants: {
-        solid: (props) => ({
+        solid: (props: any) => ({
           borderColor: mode('gray.800', 'gray.400')(props),
           marginLeft: 'auto',
           marginRight: 'auto',

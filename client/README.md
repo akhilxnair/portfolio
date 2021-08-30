@@ -8,10 +8,6 @@ This contains bits of my details. In future I am planning to get this to cater m
 
 Site is Currently deployed at <b>Vercel</b>'s Free tier .
 
-## Demo
-
-<img src="./public/demo.gif" alt="DEMO" />
-
 ## Local Development
 
 This is just a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
