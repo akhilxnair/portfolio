@@ -18,7 +18,7 @@ const ExperienceTab = () => {
       position: 'Frontend Engineer',
       duration: 'Oct 2020 - Present',
       subDetail: 'FinTech for Teenagers',
-      logo: { light: '/FamPayLogoDark.svg', dark: '/FamPayLogoLight.svg', },
+      logo: { light: '/FamPayLogoLight.png', dark: '/FamPayLogoDark.png' },
       roles: [
         <>
           Creating Web views and PAW&apos;s for
