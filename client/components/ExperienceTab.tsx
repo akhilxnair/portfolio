@@ -14,70 +14,78 @@ const ExperienceTab = () => {
   const ExperiencesList = [
     {
       name: 'FamPay',
-      longName: 'FamPay',
       url: 'https://fampay.in/',
       position: 'Frontend Engineer',
       duration: 'Oct 2020 - Present',
+      subDetail: 'FinTech for Teenagers',
       logo: { light: '/FamPayLogoDark.svg', dark: '/FamPayLogoLight.svg', },
       roles: [
         <>
-          Revamping the legacy Partner Portal into a new{' '}
-          <Link aria-label="Westfield Marketing Hub" href="https://partner.scentregroup.com/" target="_blank" rel="noreferrer">
-            Westfield Marketing Hub
-          </Link>{' '}
-          using NextJS and Typescript. Restructuring the old express backend app
-          into a newer design approach.
-        </>,
-        <>
-          Created multiple Contentful and Bynder extensions to improve BX process
-          better.
-        </>,
-        <>
-          Worked on maintaining{' '}
-          <Link variant="primaryLink" href="https://www.westfield.com.au/" target="_blank" rel="noreferrer"        >
-            Westfield
+          Creating Web views and PAW&apos;s for
+          <Link aria-label="Fampay" href="https://play.google.com/store/apps/details?id=com.fampay.in&hl=en_IN&gl=US" target="_blank" rel="noreferrer">
+            {' '} FamPay App {' '}
           </Link>
-          {' '}main site and Graphql apis written in NodeJS.
+          serving 2 Million+ users using modern frontend technologies.
         </>,
         <>
-          Migrating of existing marketing emails related tools and batches from
-          Responsys into the new platform called Braze.
+          Create and maintain
+          <Link variant="primaryLink" href="https://i.imgur.com/0wjhJUa.mp4" target="_blank" rel="noreferrer"        >
+            {' '} Explore {' '}
+          </Link>
+          section which drives the Gamification of the entire application through multiple types of rewards such as Raffles, Spinners, etc.
         </>,
         <>
-          Hired at early 2020, first big task was helping with selection a new
-          marketing vendor that can scale as well as enable us to have
-          personalisation, selecting{' '}
-          <Link aria-label="Braze" href="https://www.braze.com/" target="_blank" rel="noreferrer"        >
-            Braze
-          </Link>{' '}
-          as a result.
+          Build and Maintain
+          <Link variant="primaryLink" href="https://gift.fam.cards/" target="_blank" rel="noreferrer"        >
+            {' '} Gift a FamCard {' '}
+          </Link>
+          , Savings Goal,
+          <Link variant="primaryLink" href="https://i.imgur.com/2jcyM9w.jpg" target="_blank" rel="noreferrer"        >
+            {' '} IPL Predictions {' '}
+          </Link>
+          , Landing Page and multiple other web projects using React JS and related technologies.
+        </>,
+        <>
+          Work with backend team to build and maintain deployment pipelines for all out projects using Docker and Gitlab CI/CD.
+        </>,
+        <>
+          Hired in Oct 2020, so as the first fulltime Frontend Developer,
+          my responsibilities also include helping in hiring new developers by listing requirements,
+          reviewing coding assignment, conduction Interviews, onboarding and mentoring new developers.
         </>,
       ],
     },
     {
-      name: 'Zuru Tech',
-      longName: 'Zuru Tech India',
+      name: 'Zuru Tech India',
       url: 'https://zuru.tech/',
       position: 'Frontend Engineer',
       duration: 'Oct 2018 - Oct 2020',
       logo: { light: '/ZuruLogoDark.png', dark: '/ZuruLogoLight.png', },
       roles: [
         <>
-          Developed a Twitter Raffle Campaign / Contest Bot called Camps with
-          statistics similar to Facebook Ads.
+          Creating scalable web applications using React which were implemented inside our
+          <Link variant="primaryLink" href="https://www.youtube.com/watch?v=DPdvNVxgQQY" target="_blank" rel="noreferrer"        >
+            {' '} Dreamcatcher {' '}
+          </Link>
+          desktop software using custom chromium headless browser.
         </>,
         <>
-          In 2019 got promoted as Senior Software Engineer and worked with Cryto
-          Exchange, Smart Contracts and other APIs using several techs such as
-          NodeJS, .NET Core and React.
+          Transition from a Monorepo architecture to a micro-frontend architecture which included 7 services like Assets library, Chat application, etc.
         </>,
         <>
-          Create highly scalable Japanese e-commerce sites. Most notable clients
-          were TV Tokyo, Layla EC using .NET.
+          Maintainer of
+          <Link variant="primaryLink" href="https://i.imgur.com/ohp50kK.png" target="_blank" rel="noreferrer"        >
+            {' '}  Zuru Store  {' '}
+          </Link>
+          which displayed all information about the architectures and buildings. My role was to actively review code, maintain and build new features.
         </>,
         <>
-          Hired at 2016, Undergone a training first with Japanese language.
-          Shortly after, worked with in-house .NET MVC Framework called ERS.
+          Contributed in services like Chat System, Asset Library, User Management,
+          Notification System and many supporting system using React JS and other frontend technologies interacting with a
+          Headless Chromium Browser inside Dreamcatcher written in C++.
+        </>,
+        <>
+          Communicate with the Design team in Italy and Backend Team in India to actively create a performance focused product.
         </>,
       ],
     },
@@ -106,7 +114,7 @@ const ExperienceTab = () => {
           >
             <Image
               src={colorMode === 'dark' ? company.logo.dark : company.logo.light}
-              alt={company.longName}
+              alt={company.name}
               maxWidth="88px"
               fallback={<Skeleton height="100%" width="100%" />}
             />
@@ -123,8 +131,12 @@ const ExperienceTab = () => {
                 </Text>
                 <Text as="span">
                   <Link href={company.url} aria-label="scentregroup" rel="noreferrer" target="_blank" fontSize="lg" fontWeight="bold">
-                    #{company.name}
+                    {company.name}
                   </Link>
+                  <Text as="span" textTransform="none" fontSize="small" variant="description">
+                    {' '}
+                    {company.subDetail}
+                  </Text>
                 </Text>
                 <Text fontSize="smaller">{company.duration}</Text>
               </Stack>

@@ -16,27 +16,27 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
   return (
     <Stack width={{ base: '100%', lg: '70%' }} spacing={{ base: 6, xl: 8 }}>
       <Heading as="h4" size="2xl" letterSpacing={1.8} style={{ fontVariantCaps: 'small-caps' }}      >
-        What i do.
+        Who am I
       </Heading>
       <Text variant="description">
+        I am a software developer who graduated in 2018 with a Bachelors in Information Technology.
         I`ve been coding professionally for {professionalYears()} years, right now
-        I am working as a {' '}
+        I am working as a
         <Tooltip label="React 💙" aria-label="Tech Debt?" hasArrow>
           <Text as="span" variant="emphasis">
-            <b>Frontend Engineer</b>
+            <b>{' '}Frontend Engineer{' '}</b>
           </Text>
         </Tooltip>
-        {' '}
-        that focuses on <b>UX</b>, <b>Performance</b>,
+        that focuses on
         {' '}
         <Tooltip label="Ha!. Or more accurately negotiation with UI Team" aria-label="Tech Debt?" hasArrow>
           <Text as="span" variant="emphasis">
             <b>UI development</b>
           </Text>
         </Tooltip>
-        {', '}
-        <b>Deployment</b>,
-        and sometimes <b>Backend code</b> for personal stuff now.
+        <b> {', '}Deployment </b>,
+        <b> {' '}Performance</b>,
+        and a bit of <b>Backend</b> for personal projects.
         <br /> <br />
         Here are few main techs that are cup of my{' '}
         <Tooltip label="I drink tea too but as a night owl I'll say coffee" aria-label="I hate Tea!" hasArrow        >
