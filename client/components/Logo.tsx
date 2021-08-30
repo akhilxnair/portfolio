@@ -16,7 +16,7 @@ const Logo = () => {
   const { colorMode } = useColorMode()
   const [isLogoLoaded, setLogoLoaded] = useState(false)
   const isMobile = useBreakpointValue(mobileBreakpointsMap)
-  const image = colorMode === ThemeMode.Dark ? './LogoDark.png' : './LogoLight.png'
+  const image = colorMode === ThemeMode.Dark ? './images/LogoDark.png' : './images/LogoLight.png'
 
   return (
     <AnimatePresence>

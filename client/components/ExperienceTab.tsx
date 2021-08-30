@@ -18,8 +18,8 @@ const ExperienceTab = () => {
       position: 'Frontend Engineer',
       duration: 'Oct 2020 - Present',
       subDetail: 'FinTech for Teenagers',
-      light: '/FamPayDark.png',
-      dark: '/FamPayLight.png',
+      light: '/images/FamPayDark.png',
+      dark: '/images/FamPayLight.png',
       roles: [
         <>
           Creating Web views and PAW&apos;s for
@@ -61,8 +61,8 @@ const ExperienceTab = () => {
       url: 'https://zuru.tech/',
       position: 'Frontend Engineer',
       duration: 'Oct 2018 - Oct 2020',
-      light: '/ZuruDark.png',
-      dark: '/ZuruLight.png',
+      light: '/images/ZuruDark.png',
+      dark: '/images/ZuruLight.png',
       roles: [
         <>
           Creating scalable web applications using React which were implemented inside our

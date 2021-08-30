@@ -9,7 +9,7 @@ const OpenGraphHead = () => (
     <meta property="og:url" content="https://akhilnair.site/" />
     <meta property="og:description" content="Ohh you found me?. Howdy! I am Akhil Nair. Or you could call me AxN. That works too . . . I am a Software Engineer" />
     <meta property="og:type" content="profile" />
-    <meta property="og:image" content="https://akhilnair.site/Me.png" />
+    <meta property="og:image" content="https://akhilnair.site/images/Me.png" />
   </Head>
 )
 export default OpenGraphHead
