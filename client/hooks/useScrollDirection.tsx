@@ -10,11 +10,8 @@ const useScrollDirection = (isMobileOnly = false, isMobile = false, belowAvatar 
   const [isInitialized, setIsInitialized] = useState(false)
 
   useEffect(() => {
-    const avatarContainer = document.querySelector('#klAvatar') as HTMLElement
-    const avatarScrollY =
-      avatarContainer?.offsetTop +
-      avatarContainer.clientHeight -
-      AVATAR_PADD_OFFSET
+    const avatarContainer = document.querySelector('#axnAvatar') as HTMLElement
+    const avatarScrollY = avatarContainer?.offsetTop + avatarContainer.clientHeight - AVATAR_PADD_OFFSET
     const threshold = 10
     let lastScrollY = window.scrollY || 0
 
@@ -26,8 +23,7 @@ const useScrollDirection = (isMobileOnly = false, isMobile = false, belowAvatar 
         ticking = false
         return
       }
-      const isBelowAvatar =
-        !isMobileOnly && belowAvatar ? scrollY > avatarScrollY : true
+      const isBelowAvatar = !isMobileOnly && belowAvatar ? scrollY > avatarScrollY : true
       let currentScrollDirection = ScrollDirection.Initial
 
       // Used to tell if menu will show or not
@@ -35,9 +31,7 @@ const useScrollDirection = (isMobileOnly = false, isMobile = false, belowAvatar 
       else if (isBelowAvatar && !isMobile) currentScrollDirection = ScrollDirection.Down
       else currentScrollDirection = ScrollDirection.Up
 
-      if (currentScrollDirection !== scrollDir) {
-        setScrollDir(scrollY > lastScrollY ? ScrollDirection.Down : ScrollDirection.Up)
-      }
+      if (currentScrollDirection !== scrollDir) setScrollDir(scrollY > lastScrollY ? ScrollDirection.Down : ScrollDirection.Up)
       lastScrollY = scrollY > 0 ? scrollY : 0
       ticking = false
     }
@@ -49,9 +43,7 @@ const useScrollDirection = (isMobileOnly = false, isMobile = false, belowAvatar 
       }
     }
 
-    if ((isMobileOnly && isMobile) || !isMobileOnly) {
-      window?.addEventListener('scroll', onScroll)
-    }
+    if ((isMobileOnly && isMobile) || !isMobileOnly) window?.addEventListener('scroll', onScroll)
 
     // Fallback for initial load
     if (!isMobile && !isInitialized && lastScrollY > avatarScrollY) {
@@ -59,9 +51,7 @@ const useScrollDirection = (isMobileOnly = false, isMobile = false, belowAvatar 
       setIsInitialized(true)
     }
 
-    return () => {
-      window?.removeEventListener('scroll', onScroll)
-    }
+    return () => { window?.removeEventListener('scroll', onScroll) }
   }, [scrollDir, isMobileOnly, isMobile, isInitialized, belowAvatar])
   return scrollDir
 }

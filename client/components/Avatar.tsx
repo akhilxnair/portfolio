@@ -11,7 +11,7 @@ const Avatar = () => {
   return (
     <AnimatePresence>
       <MotionBox
-        id="klAvatar"
+        id="axnAvatar"
         boxSize={{ base: 64, lg: 'sm' }}
         padding={{ base: 8 }}
         marginBottom={{ base: 10, md: 0, lg: 0 }}
@@ -20,7 +20,7 @@ const Avatar = () => {
         variants={avatarAnimation}
         exit={{ opacity: 0 }}
       >
-        <ChkImage src="/images/me.jpg" alt="Akhil Avatar" htmlWidth="250" htmlHeight="250" margin="auto" fallback={<SkeletonCircle height="100%" width="100%" />} />
+        <ChkImage src="/images/akhil.jpg" alt="Akhil Avatar" htmlWidth="250" htmlHeight="250" margin="auto" fallback={<SkeletonCircle height="100%" width="100%" />} />
       </MotionBox>
     </AnimatePresence>
   )

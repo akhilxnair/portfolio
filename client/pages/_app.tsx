@@ -10,7 +10,7 @@ import theme from 'config/ThemeConfig'
 // Import Styles
 import 'styles/Global.css'
 
-const KLSite = ({ Component, pageProps }: AppProps) => {
+const Portfolio = ({ Component, pageProps }: AppProps) => {
   const { colorMode } = useColorMode()
   return (
     <AnimatePresence exitBeforeEnter>
@@ -25,4 +25,4 @@ const KLSite = ({ Component, pageProps }: AppProps) => {
     </AnimatePresence>
   )
 }
-export default KLSite
+export default Portfolio;
