@@ -1,7 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 // Import Modules
 import { BiRightArrow } from 'react-icons/bi'
-import Image from 'next/image';
 import { Text, Link, Stack, Tabs, TabList, Tab, TabPanels, TabPanel, List, ListIcon, ListItem, SlideFade, useColorModeValue, useBreakpointValue, useColorMode } from '@chakra-ui/react'
 
 const ExperienceTab = () => {
@@ -115,7 +114,7 @@ const ExperienceTab = () => {
             }}
             borderBottomWidth={tabOrientation === 'horizontal' ? '4px' : '0'}
           >
-            <Image
+            <img
               src={colorMode === 'dark' ? company.dark : company.light}
               alt={company.name}
               width={88}
