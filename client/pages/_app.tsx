@@ -15,7 +15,7 @@ const Portfolio = ({ Component, pageProps }: AppProps) => {
   return (
     <AnimatePresence exitBeforeEnter>
       <Head>
-        <link rel="icon" href={`/images/logo_${colorMode}.png`} />
+        <link rel="icon" href={`/images/logo_${colorMode || 'dark'}.png`} />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
