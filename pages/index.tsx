@@ -10,7 +10,7 @@ import Avatar from 'components/Avatar'
 import Sidebar from 'components/Sidebar'
 import Experience from 'components/Experience'
 import ScrollMore from 'components/ScrollMore'
-import FeaturedWorks from 'components/FeaturedWorks'
+// import FeaturedWorks from 'components/FeaturedWorks'
 import OpenGraphHead from 'components/OpenGraphHead'
 import FadeInLayout from 'components/FadeWhenVisible'
 
@@ -18,10 +18,12 @@ import FadeInLayout from 'components/FadeWhenVisible'
 import { Article } from 'types/Interfaces'
 
 // Bottom Sections - So no need to render it instantly
-const DevToArticles = dynamic(() => import('components/DevToArticles'))
+// const DevToArticles = dynamic(() => import('components/DevToArticles'))
 const GetInTouch = dynamic(() => import('components/GetInTouch'))
 
-const Portfolio = ({ articles }: { articles: Article[] }) => {
+const Portfolio = (
+  // { articles }: { articles: Article[] }
+) => {
   const sideBarPadding = useBreakpointValue({ base: '5', md: '8', lg: '14' })
   const mainContent = useBreakpointValue({ base: '5', md: '14', lg: '14', xl: 0, })
   const paddingTop = useBreakpointValue({ base: '20', sm: 20, md: 20 })
