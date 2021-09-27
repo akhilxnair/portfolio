@@ -3,9 +3,9 @@ import { memo } from 'react'
 import { Heading, Text, Link, Stack, SimpleGrid, Divider, useColorModeValue } from '@chakra-ui/react'
 
 // Import Types
-import { Article } from 'types/Interfaces'
+import { IArticle } from 'types/Interfaces'
 
-const DevToArticles = ({ articles }: { articles: Article[] }) => {
+const DevToArticles = ({ articles }: { articles: IArticle[] }) => {
   const bg = useColorModeValue('blackAlpha.50', 'whiteAlpha.100')
   const borderColor = useColorModeValue('blackAlpha.300', 'whiteAlpha.100')
   const alphaHover = useColorModeValue('rgba(49, 151, 149, 0.06)', 'rgba(157, 236, 249, 0.06)')

@@ -22,7 +22,7 @@ export type IFeaturedCard = {
   isMobile?: boolean
 }
 
-export interface Article {
+export interface IArticle {
   id: string
   type_of: string
   title: string
@@ -39,30 +39,6 @@ export type ISocialMedias = {
   href: string
   icon: IconType
 }
-
-export type ICompany = 'SCG' | 'Blotocol'
-
-export type IExperience = {
-  name: string
-  longName: string
-  subDetail?: string
-  url: string
-  position: string
-  duration: string
-  logo: { light: string; dark?: string }
-  roles?: JSX.Element[]
-}
-
-export type ISkillCategory =
-  | 'backend'
-  | 'frontend'
-  | 'cicd'
-  | 'database'
-  | 'ui frameworks'
-  | 'productivity boost'
-  | 'mobile'
-  | 'games'
-  | 'desktop'
 
 export type ISkill = {
   name: string
