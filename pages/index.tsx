@@ -1,30 +1,30 @@
 /* eslint-disable no-unused-vars */
 // Import Modules
-import dynamic from 'next/dynamic'
-import { Grid, GridItem, Stack, Box, useBreakpointValue } from '@chakra-ui/react'
+import dynamic from 'next/dynamic';
+import { Grid, GridItem, Stack, Box, useBreakpointValue } from '@chakra-ui/react';
 
 // Import Components
-import Menu from 'components/Menu'
-import About from 'components/About'
-import Avatar from 'components/Avatar'
-import Sidebar from 'components/Sidebar'
-import Experience from 'components/Experience'
-import ScrollMore from 'components/ScrollMore'
-import FeaturedWorks from 'components/FeaturedWorks'
-import OpenGraphHead from 'components/OpenGraphHead'
-import FadeInLayout from 'components/FadeWhenVisible'
+import Menu from 'components/Menu';
+import About from 'components/About';
+import Avatar from 'components/Avatar';
+import Sidebar from 'components/Sidebar';
+import Experience from 'components/Experience';
+import ScrollMore from 'components/ScrollMore';
+import FeaturedWorks from 'components/FeaturedWorks';
+import OpenGraphHead from 'components/OpenGraphHead';
+import FadeInLayout from 'components/FadeWhenVisible';
 
 // Import Types
-import { IArticle } from 'types/Interfaces'
+import { IArticle } from 'types/Interfaces';
 
 // Bottom Sections - So no need to render it instantly
-const DevToArticles = dynamic(() => import('components/DevToArticles'))
-const GetInTouch = dynamic(() => import('components/GetInTouch'))
+const DevToArticles = dynamic(() => import('components/DevToArticles'));
+const GetInTouch = dynamic(() => import('components/GetInTouch'));
 
 const Portfolio = ({ articles }: { articles: IArticle[] }) => {
-  const sideBarPadding = useBreakpointValue({ base: '5', md: '8', lg: '14' })
-  const mainContent = useBreakpointValue({ base: '5', md: '14', lg: '14', xl: 0, })
-  const paddingTop = useBreakpointValue({ base: '20', sm: 20, md: 20 })
+  const sideBarPadding = useBreakpointValue({ base: '5', md: '8', lg: '14' });
+  const mainContent = useBreakpointValue({ base: '5', md: '14', lg: '14', xl: 0, });
+  const paddingTop = useBreakpointValue({ base: '20', sm: 20, md: 20 });
 
   return (
     <>
@@ -67,13 +67,13 @@ const Portfolio = ({ articles }: { articles: IArticle[] }) => {
       </Grid>
       <ScrollMore />
     </>
-  )
-}
+  );
+};
 
 export const getStaticProps = async () => {
-  const res = await fetch('https://dev.to/api/articles?username=akhilxnair')
-  const articles = await res.json()
-  return { props: { articles } }
-}
+  const res = await fetch('https://dev.to/api/articles?username=akhilxnair');
+  const articles = await res.json();
+  return { props: { articles } };
+};
 
-export default Portfolio
+export default Portfolio;

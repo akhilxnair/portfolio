@@ -1,23 +1,23 @@
 // Import Modules
-import { motion } from 'framer-motion'
-import { SocialMedias } from 'config/StaticData'
-import { Stack, Heading, Text, Button, useColorMode, Container, Link, Box, Icon, useBreakpointValue } from '@chakra-ui/react'
+import { motion } from 'framer-motion';
+import { SocialMedias } from 'config/StaticData';
+import { Stack, Heading, Text, Button, useColorMode, Container, Link, Box, Icon, useBreakpointValue } from '@chakra-ui/react';
 
 // Import Config
-import { fadeInUp, letterSpace, simpleOpacity, stagger, scaleUp } from 'config/Animation'
+import { fadeInUp, letterSpace, simpleOpacity, stagger, scaleUp } from 'config/Animation';
 
 // Import Styles
-import styles from 'styles/Sidebar.module.css'
+import styles from 'styles/Sidebar.module.css';
 
 const Sidebar = () => {
-  const { colorMode } = useColorMode()
-  const display = useBreakpointValue({ base: 'none', lg: 'block' })
-  const surNameSize = useBreakpointValue({ base: '3xl', md: '4xl' })
-  const MotionHeading = motion(Heading)
-  const MotionText = motion(Text)
-  const MotionStack = motion(Stack)
-  const MotionButton = motion(Button)
-  const MotionBox = motion(Box)
+  const { colorMode } = useColorMode();
+  const display = useBreakpointValue({ base: 'none', lg: 'block' });
+  const surNameSize = useBreakpointValue({ base: '3xl', md: '4xl' });
+  const MotionHeading = motion(Heading);
+  const MotionText = motion(Text);
+  const MotionStack = motion(Stack);
+  const MotionButton = motion(Button);
+  const MotionBox = motion(Box);
 
   return (
     <MotionBox initial="initial" animate="animate" position={{ xl: 'fixed' }} maxWidth={{ xl: '34%' }} top={{ lg: 0 }}    >
@@ -101,7 +101,7 @@ const Sidebar = () => {
         </MotionStack>
       </Container>
     </MotionBox>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

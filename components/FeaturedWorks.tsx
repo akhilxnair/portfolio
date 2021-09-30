@@ -1,20 +1,20 @@
 // Import Modules
-import { memo } from 'react'
-import { motion } from 'framer-motion'
-import { Heading, Text, Stack, Grid, GridItem, useBreakpointValue, } from '@chakra-ui/react'
+import { memo } from 'react';
+import { motion } from 'framer-motion';
+import { Heading, Text, Stack, Grid, GridItem, useBreakpointValue, } from '@chakra-ui/react';
 
 // Import Config
-import { fadeInUpSlower, galleryStagger } from 'config/Animation'
-import { mobileBreakpointsMap } from 'config/ThemeConfig'
+import { fadeInUpSlower, galleryStagger } from 'config/Animation';
+import { mobileBreakpointsMap } from 'config/ThemeConfig';
 
 // Import Components
-import FeaturedCard from 'components/FeaturedCard'
+import FeaturedCard from 'components/FeaturedCard';
 
-const MotionGrid = motion(Grid)
-const MotionGridItem = motion(GridItem)
+const MotionGrid = motion(Grid);
+const MotionGridItem = motion(GridItem);
 
 const FeaturedWorksSection = () => {
-  const isMobile = useBreakpointValue(mobileBreakpointsMap)
+  const isMobile = useBreakpointValue(mobileBreakpointsMap);
   return (
     <Stack width={{ base: '99%', lg: '60%', xl: '75%' }} height="100%" spacing={{ base: 6, xl: 8 }}    >
       <Heading size="2xl" style={{ fontVariantCaps: 'small-caps', }}      >
@@ -73,7 +73,7 @@ const FeaturedWorksSection = () => {
         </MotionGridItem>
       </MotionGrid>
     </Stack>
-  )
-}
+  );
+};
 
-export default memo(FeaturedWorksSection)
+export default memo(FeaturedWorksSection);

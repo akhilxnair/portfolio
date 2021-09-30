@@ -1,5 +1,5 @@
 // Import Modules
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 const Path = (props: any) => {
   const { isDarkMode } = props;
@@ -11,13 +11,14 @@ const Path = (props: any) => {
       strokeLinecap="round"
       {...props}
     />
-  )
-}
+  );
+};
 
 export const MenuToggle = ({ toggle, isDarkMode = false }: { toggle(): void, isDarkMode: boolean }) => (
   <button
     type="button"
     onClick={toggle}
+    name="Navigation Button"
     style={{
       width: '40px',
       height: '40px',
@@ -32,12 +33,12 @@ export const MenuToggle = ({ toggle, isDarkMode = false }: { toggle(): void, isD
       <Path isDarkMode={isDarkMode} variants={{ closed: { d: 'M 2 16.346 L 20 16.346' }, open: { d: 'M 3 2.5 L 17 16.346' } }} />
     </svg>
   </button>
-)
+);
 
 const MobileMenu = ({ isOpen, toggle, isDarkMode = false }: { isOpen: boolean, isDarkMode: boolean, toggle(): void }) => (
   <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'} style={{ display: 'flex', alignItems: 'center' }}  >
     <MenuToggle toggle={() => toggle()} isDarkMode={isDarkMode} />
   </motion.nav>
-)
+);
 
-export default MobileMenu
+export default MobileMenu;

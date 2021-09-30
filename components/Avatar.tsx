@@ -1,10 +1,10 @@
 // Import Modules
-import { memo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Box, Image as ChkImage, SkeletonCircle } from '@chakra-ui/react'
+import { memo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Box, Image as ChkImage, SkeletonCircle } from '@chakra-ui/react';
 
 // Import Config
-import { avatarAnimation } from 'config/Animation'
+import { avatarAnimation } from 'config/Animation';
 
 const Avatar = () => {
   const MotionBox = motion(Box);
@@ -23,7 +23,7 @@ const Avatar = () => {
         <ChkImage src="/images/akhil.jpg" alt="Akhil Avatar" htmlWidth="250" htmlHeight="250" margin="auto" fallback={<SkeletonCircle height="100%" width="100%" />} />
       </MotionBox>
     </AnimatePresence>
-  )
-}
+  );
+};
 
-export default memo(Avatar)
+export default memo(Avatar);

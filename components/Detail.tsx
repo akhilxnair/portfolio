@@ -1,9 +1,9 @@
 // Import Modules
-import { memo } from 'react'
-import { IoMdOpen } from 'react-icons/io'
-import { GiCoffeePot } from 'react-icons/gi'
-import { SiJavascript, SiTypescript, SiJest, SiReact, SiNextDotJs, SiNodeDotJs } from 'react-icons/si'
-import { Heading, Text, List, ListItem, ListIcon, Icon, SimpleGrid, Box, Tooltip, Stack, useColorModeValue, } from '@chakra-ui/react'
+import { memo } from 'react';
+import { IoMdOpen } from 'react-icons/io';
+import { GiCoffeePot } from 'react-icons/gi';
+import { SiJavascript, SiTypescript, SiJest, SiReact, SiNextDotJs, SiNodeDotJs } from 'react-icons/si';
+import { Heading, Text, List, ListItem, ListIcon, Icon, SimpleGrid, Box, Tooltip, Stack, useColorModeValue, } from '@chakra-ui/react';
 
 // Import Utils
 import { professionalYears } from 'utils/HelperFunction';
@@ -12,7 +12,7 @@ import { professionalYears } from 'utils/HelperFunction';
 import { ISkillSetModal } from 'types/Interfaces';
 
 const Detail = ({ onOpen }: ISkillSetModal) => {
-  const emphasis = useColorModeValue('teal.500', 'cyan.200')
+  const emphasis = useColorModeValue('teal.500', 'cyan.200');
   return (
     <Stack width={{ base: '100%', lg: '70%' }} spacing={{ base: 6, xl: 8 }}>
       <Heading as="h4" size="2xl" letterSpacing={1.8} style={{ fontVariantCaps: 'small-caps' }}      >
@@ -82,7 +82,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         </Box>
       </SimpleGrid>
     </Stack>
-  )
-}
+  );
+};
 
-export default memo(Detail)
+export default memo(Detail);

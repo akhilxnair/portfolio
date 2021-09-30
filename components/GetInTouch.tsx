@@ -1,9 +1,9 @@
 // Import Modules
-import { memo } from 'react'
-import { motion, Variants } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { Heading, Text, Stack, Link, Icon, Box } from '@chakra-ui/react'
-import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri'
+import { memo } from 'react';
+import { motion, Variants } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { Heading, Text, Stack, Link, Icon, Box } from '@chakra-ui/react';
+import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri';
 
 const rimuruVariant: Variants = {
   shake: {
@@ -24,10 +24,10 @@ const rimuruVariant: Variants = {
       ease: 'easeInOut',
     },
   },
-}
+};
 
 const GetInTouch = () => {
-  const [ref, inView] = useInView()
+  const [ref, inView] = useInView();
   return (
     <Stack width={{ base: '99%', lg: '60%', xl: '75%' }} height="100%" spacing={{ base: 6, xl: 8 }}    >
       <Heading size="2xl" style={{ fontVariantCaps: 'small-caps', }}      >
@@ -57,7 +57,7 @@ const GetInTouch = () => {
         </Link>
       </Box>
     </Stack>
-  )
-}
+  );
+};
 
-export default memo(GetInTouch)
+export default memo(GetInTouch);

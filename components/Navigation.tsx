@@ -1,41 +1,41 @@
 // Import Modules
-import { memo, useCallback } from 'react'
-import { motion, useCycle } from 'framer-motion'
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { Container, Button, Flex, Box, IconButton, useColorMode, useColorModeValue, useBreakpointValue } from '@chakra-ui/react'
+import { memo, useCallback } from 'react';
+import { motion, useCycle } from 'framer-motion';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { Container, Button, Flex, Box, IconButton, useColorMode, useColorModeValue, useBreakpointValue } from '@chakra-ui/react';
 
 // Import Config
-import { easing, menuAnim } from 'config/Animation'
-import { ThemeMode, mobileBreakpointsMap } from 'config/ThemeConfig'
-import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
+import { easing, menuAnim } from 'config/Animation';
+import { ThemeMode, mobileBreakpointsMap } from 'config/ThemeConfig';
+import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection';
 
 // Import Components
-import MobileMenu from 'components/Toggle'
+import MobileMenu from 'components/Toggle';
 
 // Import Styles
-import styles from 'styles/Navigation.module.css'
+import styles from 'styles/Navigation.module.css';
 
 const Navigation = () => {
-  const MotionContainer = motion(Container)
-  const { toggleColorMode, colorMode } = useColorMode()
-  const isMobile = useBreakpointValue(mobileBreakpointsMap)
+  const MotionContainer = motion(Container);
+  const { toggleColorMode, colorMode } = useColorMode();
+  const isMobile = useBreakpointValue(mobileBreakpointsMap);
 
-  const [isOpen, toggleOpen] = useCycle(false, true)
+  const [isOpen, toggleOpen] = useCycle(false, true);
 
-  const borderColor = useColorModeValue('teal.500', 'cyan.200')
-  const menuButtonSize = useBreakpointValue({ base: 'xl', md: 'sm' })
-  const bg = useColorModeValue('rgba(237, 242, 247, 0.95)', 'rgba(18, 18, 18, 0.9)')
+  const borderColor = useColorModeValue('teal.500', 'cyan.200');
+  const menuButtonSize = useBreakpointValue({ base: 'xl', md: 'sm' });
+  const bg = useColorModeValue('rgba(237, 242, 247, 0.95)', 'rgba(18, 18, 18, 0.9)');
 
-  const IsDark = colorMode === ThemeMode.Dark
-  const Icon = IsDark ? SunIcon : MoonIcon
-  const btnClassName = `${styles.blogBtn} ${!IsDark && styles.dark}`
+  const IsDark = colorMode === ThemeMode.Dark;
+  const Icon = IsDark ? SunIcon : MoonIcon;
+  const btnClassName = `${styles.blogBtn} ${!IsDark && styles.dark}`;
 
   const onMenuItemClick = useCallback((e) => {
-    e.stopPropagation()
-    if (isMobile) toggleOpen()
-  }, [isMobile, toggleOpen])
+    e.stopPropagation();
+    if (isMobile) toggleOpen();
+  }, [isMobile, toggleOpen]);
 
-  const scrollDirection = useScrollDirection()
+  const scrollDirection = useScrollDirection();
   return (
     <>
       <Box display={{ base: 'flex', xl: 'none' }} alignItems="center" paddingTop={1} className={styles.menuBar} zIndex={100} top="3%">
@@ -151,7 +151,7 @@ const Navigation = () => {
         </Flex>
       </MotionContainer>
     </>
-  )
-}
+  );
+};
 
-export default memo(Navigation)
+export default memo(Navigation);

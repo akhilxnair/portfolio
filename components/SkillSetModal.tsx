@@ -2,24 +2,24 @@
 import {
   Heading, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody,
   ModalFooter, List, ListItem, ListIcon, SimpleGrid, useColorModeValue, Divider, Text,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
 // Import Config
-import { Skills } from 'config/StaticData'
+import { Skills } from 'config/StaticData';
 
 //  Import  Utils
-import { splitSkills } from 'utils/HelperFunction'
+import { splitSkills } from 'utils/HelperFunction';
 
 // Import Interfaces
-import { ISkill, ISkillModal } from 'types/Interfaces'
+import { ISkill, ISkillModal } from 'types/Interfaces';
 
 // Import Styles
-import styles from 'styles/SkillSetModal.module.css'
+import styles from 'styles/SkillSetModal.module.css';
 
 const SkillList = ({ title, skills }: { title: string, skills: ISkill[] }) => {
-  const emphasis = useColorModeValue('teal.500', 'cyan.200')
-  const columns = splitSkills(skills)
-  const [colOne, colTwo = []] = columns
+  const emphasis = useColorModeValue('teal.500', 'cyan.200');
+  const columns = splitSkills(skills);
+  const [colOne, colTwo = []] = columns;
   return (
     <>
       <Heading as="div" size="sm" paddingBottom={1} variant="description">
@@ -45,8 +45,8 @@ const SkillList = ({ title, skills }: { title: string, skills: ISkill[] }) => {
         </List>
       </SimpleGrid>
     </>
-  )
-}
+  );
+};
 const SkillSetModal = ({ isOpen, onClose }: ISkillModal) => (
   <Modal isOpen={isOpen} onClose={onClose} motionPreset="slideInBottom" scrollBehavior="inside"    >
     <ModalOverlay />
@@ -72,6 +72,6 @@ const SkillSetModal = ({ isOpen, onClose }: ISkillModal) => (
       </ModalFooter>
     </ModalContent>
   </Modal>
-)
+);
 
-export default SkillSetModal
+export default SkillSetModal;

@@ -1,14 +1,14 @@
 // Import Modules
-import { memo } from 'react'
-import { Heading, Text, Link, Stack, SimpleGrid, Divider, useColorModeValue } from '@chakra-ui/react'
+import { memo } from 'react';
+import { Heading, Text, Link, Stack, SimpleGrid, Divider, useColorModeValue } from '@chakra-ui/react';
 
 // Import Types
-import { IArticle } from 'types/Interfaces'
+import { IArticle } from 'types/Interfaces';
 
 const DevToArticles = ({ articles }: { articles: IArticle[] }) => {
-  const bg = useColorModeValue('blackAlpha.50', 'whiteAlpha.100')
-  const borderColor = useColorModeValue('blackAlpha.300', 'whiteAlpha.100')
-  const alphaHover = useColorModeValue('rgba(49, 151, 149, 0.06)', 'rgba(157, 236, 249, 0.06)')
+  const bg = useColorModeValue('blackAlpha.50', 'whiteAlpha.100');
+  const borderColor = useColorModeValue('blackAlpha.300', 'whiteAlpha.100');
+  const alphaHover = useColorModeValue('rgba(49, 151, 149, 0.06)', 'rgba(157, 236, 249, 0.06)');
 
   return (
     <Stack width={{ base: '99%', lg: '60%', xl: '75%' }} height="100%" spacing={{ base: 6, xl: 8 }}    >
@@ -62,7 +62,7 @@ const DevToArticles = ({ articles }: { articles: IArticle[] }) => {
         ))}
       </SimpleGrid>
     </Stack>
-  )
-}
+  );
+};
 
-export default memo(DevToArticles)
+export default memo(DevToArticles);

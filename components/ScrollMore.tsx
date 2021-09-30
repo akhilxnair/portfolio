@@ -1,11 +1,11 @@
 // Import Modules
-import { RiMouseLine } from 'react-icons/ri'
-import { motion, Variants, AnimatePresence } from 'framer-motion'
-import { Box, Icon, Text, useBreakpointValue, useColorModeValue, } from '@chakra-ui/react'
+import { RiMouseLine } from 'react-icons/ri';
+import { motion, Variants, AnimatePresence } from 'framer-motion';
+import { Box, Icon, Text, useBreakpointValue, useColorModeValue, } from '@chakra-ui/react';
 
 // Import Config
-import { mobileBreakpointsMap } from 'config/ThemeConfig'
-import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
+import { mobileBreakpointsMap } from 'config/ThemeConfig';
+import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection';
 
 const scrollMoreVariants: Variants = {
   initial: { opacity: 0, y: 50, },
@@ -17,7 +17,7 @@ const scrollMoreVariants: Variants = {
     y: [0, -18, 0],
     transition: { duration: 1.6, ease: 'easeInOut', loop: Infinity, },
   },
-}
+};
 
 const emailVariants: Variants = {
   hidden: { opacity: 0, y: 250, },
@@ -27,13 +27,13 @@ const emailVariants: Variants = {
     opacity: [1, 0],
     transition: { duration: 0.5, ease: 'easeOut', },
   },
-}
+};
 
 const ScrollMore = () => {
-  const isMobile = useBreakpointValue(mobileBreakpointsMap)
-  const scrollDirection = useScrollDirection(false, isMobile)
-  const emailColor = useColorModeValue('gray.800', 'gray.400')
-  const emailLine = useColorModeValue('teal.500', 'cyan.200')
+  const isMobile = useBreakpointValue(mobileBreakpointsMap);
+  const scrollDirection = useScrollDirection(false, isMobile);
+  const emailColor = useColorModeValue('gray.800', 'gray.400');
+  const emailLine = useColorModeValue('teal.500', 'cyan.200');
 
   return (
     <Box position="fixed" bottom="1em" right="3%" display={isMobile ? 'none' : 'block'}    >
@@ -88,7 +88,7 @@ const ScrollMore = () => {
         )}
       </AnimatePresence>
     </Box>
-  )
-}
+  );
+};
 
-export default ScrollMore
+export default ScrollMore;

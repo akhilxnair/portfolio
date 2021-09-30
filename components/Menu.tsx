@@ -1,18 +1,18 @@
 // Import Modules
-import { useEffect } from 'react'
-import { motion, Variants, useAnimation } from 'framer-motion'
-import { Container, useColorModeValue, useBreakpointValue } from '@chakra-ui/react'
+import { useEffect } from 'react';
+import { motion, Variants, useAnimation } from 'framer-motion';
+import { Container, useColorModeValue, useBreakpointValue } from '@chakra-ui/react';
 
 // Import Config
-import { mobileBreakpointsMap } from 'config/ThemeConfig'
-import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection'
+import { mobileBreakpointsMap } from 'config/ThemeConfig';
+import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection';
 
 // Import Components
-import Logo from 'components/Logo'
-import Navigation from 'components/Navigation'
+import Logo from 'components/Logo';
+import Navigation from 'components/Navigation';
 
 // Import Styles
-import styles from 'styles/Menu.module.css'
+import styles from 'styles/Menu.module.css';
 
 const mobileMenuVariants: Variants = {
   hidden: {
@@ -25,18 +25,18 @@ const mobileMenuVariants: Variants = {
     y: 0,
     transition: { ease: 'easeInOut', duration: 0.28, },
   },
-}
+};
 
 const Menu = () => {
-  const bg = useColorModeValue('gray.100', 'black')
-  const controls = useAnimation()
-  const isMobile = useBreakpointValue(mobileBreakpointsMap)
-  const scrollDirection = useScrollDirection(true, isMobile)
+  const bg = useColorModeValue('gray.100', 'black');
+  const controls = useAnimation();
+  const isMobile = useBreakpointValue(mobileBreakpointsMap);
+  const scrollDirection = useScrollDirection(true, isMobile);
 
   useEffect(() => {
-    if (scrollDirection === ScrollDirection.Down && isMobile) controls.start('hidden')
-    else controls.start('show')
-  }, [isMobile, controls, scrollDirection])
+    if (scrollDirection === ScrollDirection.Down && isMobile) controls.start('hidden');
+    else controls.start('show');
+  }, [isMobile, controls, scrollDirection]);
 
   return (
     <motion.div initial={isMobile ? 'hidden' : false} variants={mobileMenuVariants} animate={controls} className={isMobile ? styles.mobileMenuContainer : ''}    >
@@ -55,7 +55,7 @@ const Menu = () => {
         <Navigation />
       </Container>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

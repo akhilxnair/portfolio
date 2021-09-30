@@ -1,15 +1,15 @@
 /* eslint-disable react/no-array-index-key */
 // Import Modules
-import { BiRightArrow } from 'react-icons/bi'
-import { Text, Link, Stack, Tabs, TabList, Tab, TabPanels, TabPanel, List, ListIcon, Skeleton, ListItem, Image, SlideFade, useColorModeValue, useBreakpointValue, useColorMode } from '@chakra-ui/react'
+import { BiRightArrow } from 'react-icons/bi';
+import { Text, Link, Stack, Tabs, TabList, Tab, TabPanels, TabPanel, List, ListIcon, Skeleton, ListItem, Image, SlideFade, useColorModeValue, useBreakpointValue, useColorMode } from '@chakra-ui/react';
 
 const ExperienceTab = () => {
-  const { colorMode } = useColorMode()
-  const emphasis = useColorModeValue('teal.500', 'cyan.200')
-  const borderColor = useColorModeValue('gray.300', 'gray.600')
-  const activeBorderColor = useColorModeValue('teal.500', '#97DFFC')
-  const tabMinWidth = useBreakpointValue({ base: '160px', sm: '160px', md: 'auto', lg: 'auto', xl: 'auto' })
-  const tabOrientation = useBreakpointValue({ base: 'horizontal', sm: 'horizontal', md: 'vertical', lg: 'vertical', xl: 'vertical' }) ?? ('vertical' as any)
+  const { colorMode } = useColorMode();
+  const emphasis = useColorModeValue('teal.500', 'cyan.200');
+  const borderColor = useColorModeValue('gray.300', 'gray.600');
+  const activeBorderColor = useColorModeValue('teal.500', '#97DFFC');
+  const tabMinWidth = useBreakpointValue({ base: '160px', sm: '160px', md: 'auto', lg: 'auto', xl: 'auto' });
+  const tabOrientation = useBreakpointValue({ base: 'horizontal', sm: 'horizontal', md: 'vertical', lg: 'vertical', xl: 'vertical' }) ?? ('vertical' as any);
 
   const ExperiencesList = [
     {
@@ -89,7 +89,7 @@ const ExperienceTab = () => {
         </>,
       ],
     },
-  ]
+  ];
 
   return (
     <Tabs id="experienceTabs" orientation={tabOrientation} isLazy>
@@ -149,7 +149,7 @@ const ExperienceTab = () => {
         ))}
       </TabPanels>
     </Tabs>
-  )
-}
+  );
+};
 
-export default ExperienceTab
+export default ExperienceTab;

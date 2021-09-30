@@ -1,15 +1,15 @@
 // Import Modules
-import { motion } from 'framer-motion'
-import { Box, Image, Divider, Skeleton, Text, SimpleGrid, Button, Container, Stack, useColorModeValue } from '@chakra-ui/react'
+import { motion } from 'framer-motion';
+import { Box, Image, Divider, Skeleton, Text, SimpleGrid, Button, Container, Stack, useColorModeValue } from '@chakra-ui/react';
 
 // Import Config
-import { easing, DURATIONS } from 'config/Animation'
+import { easing, DURATIONS } from 'config/Animation';
 
 // Import Styles
-import styles from 'styles/FeaturedCard.module.css'
+import styles from 'styles/FeaturedCard.module.css';
 
 // Import Types
-import { IFeaturedCard } from 'types/Interfaces'
+import { IFeaturedCard } from 'types/Interfaces';
 
 const variants = {
   normal: { opacity: 0.85 },
@@ -23,9 +23,9 @@ const variants = {
     opacity: 1,
     transition: { duration: DURATIONS.Fast, ease: easing, },
   },
-}
+};
 
-const MotionImage = motion(Image)
+const MotionImage = motion(Image);
 
 const ProjectDescription = ({ idx, title, description, ctaUrl, isLeft, }: {
   idx: number
@@ -83,11 +83,11 @@ const ProjectDescription = ({ idx, title, description, ctaUrl, isLeft, }: {
       View Project
     </Button>
   </Container>
-)
+);
 
 const FeaturedCard = ({ idx, height, src, title, description, objectPosition, ctaUrl, isMobile }: IFeaturedCard) => {
-  const isLeftImage = isMobile ? false : idx % 2 === 0
-  const bg = useColorModeValue('blackAlpha.50', 'whiteAlpha.200')
+  const isLeftImage = isMobile ? false : idx % 2 === 0;
+  const bg = useColorModeValue('blackAlpha.50', 'whiteAlpha.200');
   const CoverImage = () => (
     <MotionImage
       height={height}
@@ -102,7 +102,7 @@ const FeaturedCard = ({ idx, height, src, title, description, objectPosition, ct
       whileTap={variants.tap}
       fallback={<Skeleton height={height} width="100%" />}
     />
-  )
+  );
 
   return (
     <Box height="auto" bg={bg} borderRadius="1em" className={styles.featureCard} borderColor={bg} borderWidth="1px"    >
@@ -112,6 +112,6 @@ const FeaturedCard = ({ idx, height, src, title, description, objectPosition, ct
         {!isLeftImage && <CoverImage />}
       </SimpleGrid>
     </Box>
-  )
-}
-export default FeaturedCard
+  );
+};
+export default FeaturedCard;

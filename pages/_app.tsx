@@ -1,17 +1,17 @@
 // Import Modules
-import Head from 'next/head'
-import type { AppProps } from 'next/app'
-import { AnimatePresence } from 'framer-motion'
-import { ChakraProvider, useColorMode } from '@chakra-ui/react'
+import Head from 'next/head';
+import type { AppProps } from 'next/app';
+import { AnimatePresence } from 'framer-motion';
+import { ChakraProvider, useColorMode } from '@chakra-ui/react';
 
 // Import Config
-import theme from 'config/ThemeConfig'
+import theme from 'config/ThemeConfig';
 
 // Import Styles
-import 'styles/Global.css'
+import 'styles/Global.css';
 
 const Portfolio = ({ Component, pageProps }: AppProps) => {
-  const { colorMode } = useColorMode()
+  const { colorMode } = useColorMode();
   return (
     <AnimatePresence exitBeforeEnter>
       <Head>
@@ -23,6 +23,6 @@ const Portfolio = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
       </ChakraProvider>
     </AnimatePresence>
-  )
-}
+  );
+};
 export default Portfolio;
