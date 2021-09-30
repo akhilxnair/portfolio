@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Heading, Text, Stack, Grid, GridItem, useBreakpointValue, } from '@chakra-ui/react';
 
 // Import Config
-import { fadeInUpSlower, galleryStagger } from 'config/Animation';
+import { FadeInUpSlower, GalleryStagger } from 'config/Animation';
 import { mobileBreakpointsMap } from 'config/ThemeConfig';
 
 // Import Components
@@ -23,8 +23,8 @@ const FeaturedWorksSection = () => {
       <Text variant="description">
         Checkout some of my works I did at freelancing, company projects and even case studies.
       </Text>
-      <MotionGrid templateRows="repeat(1, 1fr)" templateColumns="repeat(6, 1fr)" gap={{ base: 5, md: 6 }} variants={galleryStagger}      >
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
+      <MotionGrid templateRows="repeat(1, 1fr)" templateColumns="repeat(6, 1fr)" gap={{ base: 5, md: 6 }} variants={GalleryStagger}      >
+        <MotionGridItem colSpan={6} variants={FadeInUpSlower}>
           <FeaturedCard
             idx={1}
             title="Tobira!"
@@ -37,7 +37,7 @@ const FeaturedWorksSection = () => {
             isMobile={isMobile}
           />
         </MotionGridItem>
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
+        <MotionGridItem colSpan={6} variants={FadeInUpSlower}>
           <FeaturedCard
             idx={2}
             title="RSV"
@@ -48,7 +48,7 @@ const FeaturedWorksSection = () => {
             isMobile={isMobile}
           />
         </MotionGridItem>
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
+        <MotionGridItem colSpan={6} variants={FadeInUpSlower}>
           <FeaturedCard
             idx={3}
             title="Agora School"
@@ -60,7 +60,7 @@ const FeaturedWorksSection = () => {
             isMobile={isMobile}
           />
         </MotionGridItem>
-        <MotionGridItem colSpan={6} variants={fadeInUpSlower}>
+        <MotionGridItem colSpan={6} variants={FadeInUpSlower}>
           <FeaturedCard
             idx={4}
             title="TMH Layla EC"

@@ -4,7 +4,7 @@ import { SocialMedias } from 'config/StaticData';
 import { Stack, Heading, Text, Button, useColorMode, Container, Link, Box, Icon, useBreakpointValue } from '@chakra-ui/react';
 
 // Import Config
-import { fadeInUp, letterSpace, simpleOpacity, stagger, scaleUp } from 'config/Animation';
+import { FadeInUp, LetterSpace, SimpleOpacity, Stagger, ScaleUp } from 'config/Animation';
 
 // Import Styles
 import styles from 'styles/Sidebar.module.css';
@@ -24,16 +24,16 @@ const Sidebar = () => {
       <motion.div
         id="sidebarCircle"
         className={`${styles.sidebar} ${colorMode === 'light' ? styles.dark : ''}`}
-        variants={scaleUp}
+        variants={ScaleUp}
         style={{ display }}
         animate={colorMode === 'dark' ? 'animate' : 'lightMode'}
       />
       <Container padding={0} margin={0} height={{ xl: '100vh' }} display={{ xl: 'flex' }} alignItems={{ xl: 'center' }}      >
-        <MotionStack variants={stagger} spacing={6} w="100">
-          <MotionText variants={fadeInUp} delay={1} variant="accent" fontWeight="light"          >
+        <MotionStack variants={Stagger} spacing={6} w="100">
+          <MotionText variants={FadeInUp} delay={1} variant="accent" fontWeight="light"          >
             Here&apos;s an Interesting Portfolio
           </MotionText>
-          <MotionHeading as="h1" size="2xl" paddingRight={{ lg: '20' }} textTransform="uppercase" variants={fadeInUp}          >
+          <MotionHeading as="h1" size="2xl" paddingRight={{ lg: '20' }} textTransform="uppercase" variants={FadeInUp}          >
             Developer
           </MotionHeading>
           <MotionHeading
@@ -42,21 +42,21 @@ const Sidebar = () => {
             variant="emphasis"
             className={styles.marginTopForce}
             textTransform="uppercase"
-            variants={letterSpace}
+            variants={LetterSpace}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
             Akhil Nair
           </MotionHeading>
-          <MotionText colorScheme="gray" fontSize="smaller" className={styles.marginTopForce} variants={fadeInUp}>
+          <MotionText colorScheme="gray" fontSize="smaller" className={styles.marginTopForce} variants={FadeInUp}>
             Or you could call me AxN. That works too . . .
           </MotionText>
 
-          <MotionHeading as="h3" size="md" variant="emphasis" className={styles.marginTopSmall} variants={fadeInUp}          >
+          <MotionHeading as="h3" size="md" variant="emphasis" className={styles.marginTopSmall} variants={FadeInUp}          >
             Frontend Software Engineer
           </MotionHeading>
 
-          <MotionText variant="description" fontSize="small" paddingRight={{ lg: '12' }} variants={fadeInUp} maxWidth={{ base: '100%', lg: '80%' }}>
+          <MotionText variant="description" fontSize="small" paddingRight={{ lg: '12' }} variants={FadeInUp} maxWidth={{ base: '100%', lg: '80%' }}>
             Hey! How nice of you to look at my personal site,{' '}
             <Text variant="emphasis" as="span">
               Thank you!
@@ -72,7 +72,7 @@ const Sidebar = () => {
             fontWeight="normal"
             fontSize="sm"
             width="120px"
-            variants={simpleOpacity}
+            variants={SimpleOpacity}
             as="a"
             href="mailto:4khiln4ir@gmail.com"
             target="_blank"
@@ -82,7 +82,7 @@ const Sidebar = () => {
             Get in touch!
           </MotionButton>
 
-          <MotionBox d="flex" variants={simpleOpacity}>
+          <MotionBox d="flex" variants={SimpleOpacity}>
             {SocialMedias.map((socMedia) => (
               <Link
                 variant="description"

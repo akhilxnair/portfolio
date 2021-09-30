@@ -1,6 +1,7 @@
+/* eslint-disable camelcase */
 // Import Modules
-import { IconType } from 'react-icons'
-import { ColorMode, ResponsiveValue } from '@chakra-ui/react'
+import { IconType } from 'react-icons';
+import { ColorMode, ResponsiveValue } from '@chakra-ui/react';
 
 export interface IThemeMode {
   Light: ColorMode

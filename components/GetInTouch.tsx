@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { Heading, Text, Stack, Link, Icon, Box } from '@chakra-ui/react';
 import { RiHeartPulseFill, RiCopyleftLine, RiGithubFill } from 'react-icons/ri';
 
-const rimuruVariant: Variants = {
+const variants: Variants = {
   shake: {
     rotate: [0, 15, 0, -15, 0],
     transition: {
@@ -33,7 +33,7 @@ const GetInTouch = () => {
       <Heading size="2xl" style={{ fontVariantCaps: 'small-caps', }}      >
         Say hi!{' '}
         <Text as="span" fontSize="2xl" variant="emphasis">
-          <motion.div style={{ display: 'inline-block' }} variants={rimuruVariant} ref={ref} animate={inView ? ['shake', 'jump'] : false}          >
+          <motion.div style={{ display: 'inline-block' }} variants={variants} ref={ref} animate={inView ? ['shake', 'jump'] : false}          >
             (⁀ᗢ⁀)
           </motion.div>
         </Text>

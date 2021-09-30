@@ -5,7 +5,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Container, Button, Flex, Box, IconButton, useColorMode, useColorModeValue, useBreakpointValue } from '@chakra-ui/react';
 
 // Import Config
-import { easing, menuAnim } from 'config/Animation';
+import { easing, MenuAnim } from 'config/Animation';
 import { ThemeMode, mobileBreakpointsMap } from 'config/ThemeConfig';
 import useScrollDirection, { ScrollDirection } from 'hooks/useScrollDirection';
 
@@ -60,7 +60,7 @@ const Navigation = () => {
         borderBottomWidth={isOpen && isMobile && '1px'}
         paddingBottom={isOpen && isMobile && '1px'}
         ease={easing}
-        variants={menuAnim}
+        variants={MenuAnim}
         marginTop={0}
         paddingTop={1}
         as="nav"

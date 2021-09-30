@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Box, Image, Divider, Skeleton, Text, SimpleGrid, Button, Container, Stack, useColorModeValue } from '@chakra-ui/react';
 
 // Import Config
-import { easing, DURATIONS } from 'config/Animation';
+import { Easing, Durations } from 'config/Animation';
 
 // Import Styles
 import styles from 'styles/FeaturedCard.module.css';
@@ -16,12 +16,12 @@ const variants = {
   hover: {
     scale: 1.1,
     opacity: 1,
-    transition: { duration: DURATIONS.Fast, ease: 'backOut', },
+    transition: { duration: Durations.Fast, ease: 'backOut', },
   },
   tap: {
     scale: 0.85,
     opacity: 1,
-    transition: { duration: DURATIONS.Fast, ease: easing, },
+    transition: { duration: Durations.Fast, ease: Easing, },
   },
 };
 

@@ -1,12 +1,12 @@
 // Import Modules
-import { IoLogoPwa } from 'react-icons/io5'
+import { IoLogoPwa } from 'react-icons/io5';
 import {
   FaInstagram,
   FaLinkedin,
   FaStackOverflow,
   FaTwitter,
   FaGithub,
-} from 'react-icons/fa'
+} from 'react-icons/fa';
 import {
   SiHtml5,
   SiCss3,
@@ -39,10 +39,10 @@ import {
   SiFramer,
   SiGoogletagmanager,
   SiSentry,
-} from 'react-icons/si'
+} from 'react-icons/si';
 
 // Import Interfaces
-import { ISocialMedias } from 'types/Interfaces'
+import { ISocialMedias } from 'types/Interfaces';
 
 export const SocialMedias: ISocialMedias[] = [
   {
@@ -70,7 +70,7 @@ export const SocialMedias: ISocialMedias[] = [
     href: 'https://github.com/akhilxnair',
     icon: FaGithub,
   },
-]
+];
 
 export const Skills = {
   languages: [
@@ -133,4 +133,4 @@ export const Skills = {
     { name: 'PWA / Web Views', icon: IoLogoPwa },
     { name: 'React Native', icon: SiReact },
   ],
-}
+};

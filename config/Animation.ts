@@ -1,22 +1,23 @@
-const DURATIONS = {
+const Durations = {
   VeryFast: 0.3,
   Fast: 0.6,
   Normal: 0.8,
   Slow: 1.2,
   VerySlow: 1.8,
-}
-const easing = [0.6, -0.05, 0.01, 0.99]
+};
 
-const fadeInUp = {
+const Easing = [0.6, -0.05, 0.01, 0.99];
+
+const FadeInUp = {
   initial: { y: 60, opacity: 0 },
   animate: {
     y: 0,
     opacity: 1,
-    transition: { duration: DURATIONS.Fast, ease: easing },
+    transition: { duration: Durations.Fast, ease: Easing },
   },
-}
+};
 
-const fadeInUpSlower = {
+const FadeInUpSlower = {
   initial: {
     y: 80,
     opacity: 0,
@@ -24,32 +25,32 @@ const fadeInUpSlower = {
   animate: {
     y: 0,
     opacity: 1,
-    transition: { duration: DURATIONS.Normal, ease: easing },
+    transition: { duration: Durations.Normal, ease: Easing },
   },
-}
+};
 
-const letterSpace = {
+const LetterSpace = {
   initial: {
     opacity: 0,
   },
   animate: {
     letterSpacing: ['0px', '-10px', '0px'],
     opacity: 1,
-    transition: { duration: DURATIONS.Slow, ease: easing },
+    transition: { duration: Durations.Slow, ease: Easing },
   },
-}
+};
 
-const simpleOpacity = {
+const SimpleOpacity = {
   initial: {
     opacity: 0,
   },
   animate: {
     opacity: 1,
-    transition: { duration: DURATIONS.Fast, ease: easing },
+    transition: { duration: Durations.Fast, ease: Easing },
   },
-}
+};
 
-const scaleUp = {
+const ScaleUp = {
   initial: {
     scale: 0,
     opacity: 0,
@@ -57,29 +58,29 @@ const scaleUp = {
   animate: {
     opacity: [0, 1],
     scale: [1, 1.05, 1],
-    transition: { duration: DURATIONS.VerySlow, ease: easing },
+    transition: { duration: Durations.VerySlow, ease: Easing},
   },
   lightMode: {
     opacity: [0, 1],
     scale: [0.99, 1.05, 1],
-    transition: { duration: DURATIONS.VerySlow, ease: easing },
+    transition: { duration: Durations.VerySlow, ease: Easing },
   },
-}
+};
 
-const menuAnim = {
+const MenuAnim = {
   show: {
     y: 0,
     opacity: 1,
-    transition: { ease: easing, duration: DURATIONS.VeryFast },
+    transition: { ease: Easing, duration: Durations.VeryFast },
   },
   hide: {
     opacity: 0,
     y: -100,
-    transition: { ease: easing, duration: DURATIONS.VeryFast },
+    transition: { ease: Easing, duration: Durations.VeryFast },
   },
-}
+};
 
-const avatarAnimation = {
+const AvatarAnimation = {
   initial: {
     opacity: 0,
     y: 60,
@@ -87,34 +88,35 @@ const avatarAnimation = {
   animate: {
     y: 0,
     opacity: 1,
-    transition: { duration: DURATIONS.Fast, ease: easing },
+    transition: { duration: Durations.Fast, ease: Easing },
   },
   exit: {
     opacity: 0,
   },
-}
+};
 
-const stagger = {
+const Stagger = {
   animate: {
     transition: { staggerChildren: 0.1 },
   },
-}
-const galleryStagger = {
+};
+
+const GalleryStagger = {
   animate: {
     transition: { staggerChildren: 0.2 },
   },
-}
+};
 
 export {
-  DURATIONS,
-  easing,
-  fadeInUp,
-  fadeInUpSlower,
-  letterSpace,
-  stagger,
-  galleryStagger,
-  simpleOpacity,
-  menuAnim,
-  scaleUp,
-  avatarAnimation,
-}
+  Durations,
+  Easing,
+  FadeInUp,
+  FadeInUpSlower,
+  LetterSpace,
+  Stagger,
+  GalleryStagger,
+  SimpleOpacity,
+  MenuAnim,
+  ScaleUp,
+  AvatarAnimation,
+};

@@ -1,5 +1,5 @@
-/* eslint-disable react/no-array-index-key */
 // Import Modules
+/* eslint-disable react/no-array-index-key */
 import { BiRightArrow } from 'react-icons/bi';
 import { Text, Link, Stack, Tabs, TabList, Tab, TabPanels, TabPanel, List, ListIcon, Skeleton, ListItem, Image, SlideFade, useColorModeValue, useBreakpointValue, useColorMode } from '@chakra-ui/react';
 

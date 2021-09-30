@@ -1,21 +1,21 @@
 // Import Modules
-import { mode } from '@chakra-ui/theme-tools'
-import { extendTheme, ChakraTheme, ThemeComponentProps } from '@chakra-ui/react'
+import { mode } from '@chakra-ui/theme-tools';
+import { extendTheme, ChakraTheme, ThemeComponentProps } from '@chakra-ui/react';
 
 // Import Interfaces
-import { IThemeMode } from 'types/Interfaces'
+import { IThemeMode } from 'types/Interfaces';
 
-export const ThemeMode: IThemeMode = { Light: 'light', Dark: 'dark' }
+export const ThemeMode: IThemeMode = { Light: 'light', Dark: 'dark' };
 
 export const mobileBreakpointsMap = {
   base: true,
   md: true,
   lg: true,
   xl: false,
-}
+};
 
-const config = { initialColorMode: ThemeMode.Dark, useSystemColorMode: false }
-const colors = { black: '#121212' }
+const config = { initialColorMode: ThemeMode.Dark, useSystemColorMode: false };
+const colors = { black: '#121212' };
 
 const styles = {
   global: (props: any) => ({
@@ -24,7 +24,7 @@ const styles = {
       bg: mode('gray.100', '#121212')(props),
     },
   }),
-}
+};
 
 const textVariants = {
   emphasis: (props: ThemeComponentProps<ChakraTheme>) => ({
@@ -39,7 +39,7 @@ const textVariants = {
   accentAlternative: (props: ThemeComponentProps<ChakraTheme>) => ({
     color: mode('#595959', '#A6A6A6')(props),
   }),
-}
+};
 
 const theme = extendTheme({
   config,
@@ -99,6 +99,6 @@ const theme = extendTheme({
       },
     },
   },
-})
+});
 
-export default theme
+export default theme;

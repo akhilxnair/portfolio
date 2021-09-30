@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 // Import Config
-import { fadeInUpSlower } from 'config/Animation';
+import { FadeInUpSlower } from 'config/Animation';
 
 const FadeInWhenVisible: FC = ({ children }) => {
   const controls = useAnimation();
@@ -15,7 +15,7 @@ const FadeInWhenVisible: FC = ({ children }) => {
   }, [controls, inView]);
 
   return (
-    <motion.div style={{ margin: 0 }} ref={ref} animate={controls} initial="initial" variants={fadeInUpSlower}    >
+    <motion.div style={{ margin: 0 }} ref={ref} animate={controls} initial="initial" variants={FadeInUpSlower}    >
       {children}
     </motion.div>
   );
