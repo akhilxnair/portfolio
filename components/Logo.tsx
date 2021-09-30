@@ -6,7 +6,7 @@ import { useColorMode, Image, useBreakpointValue } from '@chakra-ui/react';
 
 // Import Config
 import { mobileBreakpointsMap } from 'config/ThemeConfig';
-import { simpleOpacity } from 'config/Animation';
+import { SimpleOpacity } from 'config/Animation';
 
 // Import Styles
 import styles from 'styles/Logo.module.css';
@@ -25,7 +25,7 @@ const Logo = () => {
           alt="Akhil Logo"
           initial="initial"
           objectFit="cover"
-          variants={simpleOpacity}
+          variants={SimpleOpacity}
           fallbackSrc="./images/logo_dark.png"
           onLoad={() => setLogoLoaded(true)}
           animate={isLogoLoaded && 'animate'}
