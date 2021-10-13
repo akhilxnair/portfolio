@@ -1,5 +1,5 @@
 // Import Interfaces
-import { ISkill } from 'types/Interfaces';
+import { ISkill } from "types/Interfaces";
 
 export const splitSkills = (srcArray: ISkill[]) => {
   const arrLength = srcArray.length;

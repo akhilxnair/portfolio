@@ -1,3 +1,4 @@
+// Import Modules
 import Head from 'next/head';
 
 const OpenGraphHead = () => (

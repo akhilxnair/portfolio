@@ -18,10 +18,7 @@ const FadeInUp = {
 };
 
 const FadeInUpSlower = {
-  initial: {
-    y: 80,
-    opacity: 0,
-  },
+  initial: { y: 80, opacity: 0 },
   animate: {
     y: 0,
     opacity: 1,
@@ -30,20 +27,16 @@ const FadeInUpSlower = {
 };
 
 const LetterSpace = {
-  initial: {
-    opacity: 0,
-  },
+  initial: { opacity: 0 },
   animate: {
-    letterSpacing: ['0px', '-10px', '0px'],
+    letterSpacing: ["0px", "-10px", "0px"],
     opacity: 1,
     transition: { duration: Durations.Slow, ease: Easing },
   },
 };
 
 const SimpleOpacity = {
-  initial: {
-    opacity: 0,
-  },
+  initial: { opacity: 0 },
   animate: {
     opacity: 1,
     transition: { duration: Durations.Fast, ease: Easing },
@@ -51,14 +44,11 @@ const SimpleOpacity = {
 };
 
 const ScaleUp = {
-  initial: {
-    scale: 0,
-    opacity: 0,
-  },
+  initial: { scale: 0, opacity: 0 },
   animate: {
     opacity: [0, 1],
     scale: [1, 1.05, 1],
-    transition: { duration: Durations.VerySlow, ease: Easing},
+    transition: { duration: Durations.VerySlow, ease: Easing },
   },
   lightMode: {
     opacity: [0, 1],
@@ -81,42 +71,21 @@ const MenuAnim = {
 };
 
 const AvatarAnimation = {
-  initial: {
-    opacity: 0,
-    y: 60,
-  },
+  initial: { opacity: 0, y: 60 },
   animate: {
     y: 0,
     opacity: 1,
     transition: { duration: Durations.Fast, ease: Easing },
   },
-  exit: {
-    opacity: 0,
-  },
+  exit: { opacity: 0 },
 };
 
 const Stagger = {
-  animate: {
-    transition: { staggerChildren: 0.1 },
-  },
+  animate: { transition: { staggerChildren: 0.1 } },
 };
 
 const GalleryStagger = {
-  animate: {
-    transition: { staggerChildren: 0.2 },
-  },
+  animate: { transition: { staggerChildren: 0.2 } },
 };
 
-export {
-  Durations,
-  Easing,
-  FadeInUp,
-  FadeInUpSlower,
-  LetterSpace,
-  Stagger,
-  GalleryStagger,
-  SimpleOpacity,
-  MenuAnim,
-  ScaleUp,
-  AvatarAnimation,
-};
+export { Durations, Easing, FadeInUp, FadeInUpSlower, LetterSpace, Stagger, GalleryStagger, SimpleOpacity, MenuAnim, ScaleUp, AvatarAnimation };
