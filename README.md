@@ -1,4 +1,4 @@
-# Akhil Nair's Personal Site
+# [Akhil Nair's Personal Site](https://www.akhilnair.site/)
 
 Hey there! Akhil here. This is a v2 of my portfolio site, a complete rewrite from v1 which is shamefully a template I edited a bit back on 2018. I wanted to try out what I can do on my own in regards to UI and UX design so I reckon why not start with my porfolio.
 
