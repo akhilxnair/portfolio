@@ -108,7 +108,7 @@ const Navigation = () => {
               Experience
             </Button>
           </Box>
-          <Box width={{ base: '100%', lg: 'auto' }} textAlign={{ base: 'center', lg: 'left' }} marginY={{ base: 2, lg: 0 }}          >
+          {/* <Box width={{ base: '100%', lg: 'auto' }} textAlign={{ base: 'center', lg: 'left' }} marginY={{ base: 2, lg: 0 }}          >
             <Button
               fontWeight="light"
               variant="ghost"
@@ -124,7 +124,7 @@ const Navigation = () => {
             >
               Works
             </Button>
-          </Box>
+          </Box> */}
           <Box width={{ base: '100%', lg: 'auto' }} textAlign={{ base: 'center', lg: 'left' }} marginY={{ base: 2, lg: 0 }}          >
             <Button
               fontWeight="light"

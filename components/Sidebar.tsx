@@ -53,7 +53,7 @@ const Sidebar = () => {
           </MotionText>
 
           <MotionHeading as="h3" size="md" variant="emphasis" className={styles.marginTopSmall} variants={FadeInUp}          >
-            Frontend Software Engineer
+            Senior Frontend Engineer
           </MotionHeading>
 
           <MotionText variant="description" fontSize="small" paddingRight={{ lg: '12' }} variants={FadeInUp} maxWidth={{ base: '100%', lg: '80%' }}>

@@ -15,7 +15,7 @@ const ExperienceTab = () => {
     {
       name: 'FamPay',
       url: 'https://fampay.in/',
-      position: 'Frontend Engineer',
+      position: 'Senior Frontend Engineer',
       duration: 'Oct 2020 - Present',
       subDetail: 'FinTech for Teenagers',
       logo: `/images/fampay_${colorMode}.png`,

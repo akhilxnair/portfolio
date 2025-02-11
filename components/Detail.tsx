@@ -24,7 +24,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
         I am working as a
         <Tooltip label="React 💙" aria-label="Tech Debt?" hasArrow>
           <Text as="span" variant="emphasis">
-            <b>{' '}Frontend Engineer{' '}</b>
+            <b>{' '}Senior Frontend Engineer{' '}</b>
           </Text>
         </Tooltip>
         that focuses on
