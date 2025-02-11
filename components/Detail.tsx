@@ -2,7 +2,7 @@
 import { memo } from 'react';
 import { IoMdOpen } from 'react-icons/io';
 import { GiCoffeePot } from 'react-icons/gi';
-import { SiJavascript, SiTypescript, SiJest, SiReact, SiNextDotJs, SiNodeDotJs } from 'react-icons/si';
+import { SiJavascript, SiTypescript, SiJest, SiReact, SiNextdotjs, SiNodedotjs } from 'react-icons/si';
 import { Heading, Text, List, ListItem, ListIcon, Icon, SimpleGrid, Box, Tooltip, Stack, useColorModeValue, } from '@chakra-ui/react';
 
 // Import Utils
@@ -12,7 +12,7 @@ import { professionalYears } from 'utils/HelperFunction';
 import { ISkillSetModal } from 'types/Interfaces';
 
 const Detail = ({ onOpen }: ISkillSetModal) => {
-  const emphasis = useColorModeValue('teal.500', 'cyan.200');
+  const emphasis: string = useColorModeValue('teal.500', 'cyan.200');
   return (
     <Stack width={{ base: '100%', lg: '70%' }} spacing={{ base: 6, xl: 8 }}>
       <Heading as="h4" size="2xl" letterSpacing={1.8} style={{ fontVariantCaps: 'small-caps' }}      >
@@ -57,7 +57,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             React
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiNodeDotJs} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiNodedotjs} color={emphasis} fontSize="2em" />
             Node
           </ListItem>
         </List>
@@ -67,7 +67,7 @@ const Detail = ({ onOpen }: ISkillSetModal) => {
             Typescript
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
-            <ListIcon as={SiNextDotJs} color={emphasis} fontSize="2em" />
+            <ListIcon as={SiNextdotjs} color={emphasis} fontSize="2em" />
             NextJS
           </ListItem>
           <ListItem fontSize="small" display="flex" alignItems="center">
